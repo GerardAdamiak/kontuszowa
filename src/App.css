@@ -1,0 +1,255 @@
+/* App.css */
+
+/* Add this at the top of your CSS file */
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+}
+
+body, html {
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  height: 100%; /* Ensure body and html take full height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Ensures the app takes full height and prevents overflow */
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh; /* Full height for flexbox */
+}
+
+/* App-header styles */
+.App-header {
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically */
+  position: relative;
+  width: 100%; /* Ensure it takes full width */
+}
+
+/* Intro section styles */
+.intro-section {
+  flex: 1; /* This allows the intro section to grow and fill the available space */
+  padding: 50px 20px;
+  background-color: #1c1c1e;
+  color: #fff;
+  text-align: center;
+}
+
+.intro-section h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.intro-section p {
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* App-section styles */
+.App-section {
+  flex: 1; /* This allows the section to grow and fill the available space */
+  padding: 50px 20px;
+  background-color: #1c1c1e;
+  color: #fff;
+}
+
+/* Footer styles */
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%; /* Ensure it takes full width */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Other styles remain the same... */
+  
+  .App-footer {
+    margin-top: auto; /* Push to the bottom on mobile */
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #1c1c1e; /* Navbar color */
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #61dafb;
+}
+
+.hero-text {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.App-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: 100%;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .hero-text {
+    font-size: 36px;
+  }
+
+  .App-header {
+    min-height: 60vh;
+  }
+
+  .intro-section h2 {
+    font-size: 24px;
+  }
+
+  .intro-section p {
+    font-size: 16px;
+  }
+
+  .App-section h3 {
+    font-size: 24px;
+  }
+
+  .App-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 28px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .App-header {
+    min-height: 50vh;
+  }
+
+  .intro-section h2 {
+    font-size: 20px;
+  }
+
+  .intro-section p {
+    font-size: 14px;
+  }
+
+  .App-section h3 {
+    font-size: 20px;
+  }
+
+  .App-section p {
+    font-size: 14px;
+  }
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 50px; /* Adjust this value to position lower */
+  left: 0;
+  right: 0;
+  background-color: #1c1c1e; /* Change to dark color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+/* Dropdown items */
+.dropdown li {
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+/* Change dropdown item link colors to dark */
+.dropdown li a {
+  text-decoration: none;
+  color: white; /* Dark button color */
+  display: block; /* Make the link fill the list item */
+}
+
+/* Change dropdown item link color on hover */
+.dropdown li a:hover {
+  background-color: #333; /* Darker color on hover */
+}
+
+/* Dropdown visibility based on mobile view */
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none; /* Hide menu icon on larger screens */
+  }
+
+  .dropdown {
+    display: flex; /* Show menu items inline on larger screens */
+    position: static; /* Position as normal flow */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  .navbar ul {
+    display: flex; /* Flexbox for horizontal menu */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar ul li {
+    margin: 0 10px; /* Spacing between menu items */
+  }
+}
