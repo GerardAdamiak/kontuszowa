@@ -10,7 +10,8 @@ import menuIcon from './menu-icon.png'; // Replace with your actual menu icon pa
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Check if screen is mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [language, setLanguage] = useState('EN'); // Initial language state
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,10 +30,15 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Toggle between languages
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => (prevLanguage === 'EN' ? 'PL' : 'EN'));
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
-      <nav className="navbar">
+        <nav className="navbar">
           {/* Menu icon for mobile */}
           {isMobile ? (
             <div className="menu-icon" onClick={toggleMenu}>
@@ -53,22 +59,25 @@ function App() {
           {/* Horizontal Menu for Desktop */}
           {!isMobile && (
             <ul className="desktop-menu">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/about-us">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/">{language === 'PL' ? 'Start' : 'Home'}</Link></li>
+              <li><Link to="/products">{language === 'PL' ? 'Produkty' : 'Products'}</Link></li>
+              <li><Link to="/about-us">{language === 'PL' ? 'O Nas' : 'About Us'}</Link></li>
+              <li><Link to="/contact">{language === 'PL' ? 'Kontakt' : 'Contact'}</Link></li>
             </ul>
           )}
+
+          {/* Language Switcher */}
+          <div className="language-switcher" onClick={toggleLanguage}>
+            {language === 'PL' ? 'EN' : 'PL'}
+          </div>
         </nav>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home language={language} />} />
+          <Route path="/products" element={<Products language={language} />} />
+          <Route path="/about-us" element={<AboutUs language={language} />} />
+          <Route path="/contact" element={<Contact language={language} />} />
         </Routes>
-
-        
 
         <footer className="App-footer">
           <p>© 2024 Kontuszowa - All rights reserved.</p>

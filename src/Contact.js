@@ -1,9 +1,9 @@
 // Home.js
 import React from 'react';
 
-function Contact() {
+function Contact({ language }) {
     React.useEffect(() => {
-      document.title = "Kontuszowa Contact";
+      document.title =  'PL' ? 'Kontuszowa Kontakt' : 'Kontuszowa O Nas';
     }, []);
   
     return (
@@ -20,9 +20,9 @@ function Contact() {
           
           
           <section id="contact" className="App-section">
-            <h3>Contact Us</h3>
+            <h3>{language === 'PL' ? 'Skontaktuj się z Nami' : 'Contact Us'}</h3>
             <p>Email: info@kontuszowa.com</p>
-            <p>Phone: +48 123 456 789</p>
+            <p>{language === 'PL' ? 'Telefon: +48 123 456 789' : 'Phone: +48 123 456 789'}</p>
           </section>
   
           

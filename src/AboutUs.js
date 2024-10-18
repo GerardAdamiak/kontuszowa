@@ -1,9 +1,9 @@
 // Home.js
 import React from 'react';
 
-function AboutUs() {
+function AboutUs({ language }) {
     React.useEffect(() => {
-      document.title = "Kontuszowa About Us";
+      document.title =  'PL' ? 'Kontuszowa O Nas' : 'Kontuszowa About Us';
     }, []);
   
     return (
@@ -20,9 +20,9 @@ function AboutUs() {
           
           
           <section id="about" className="App-section">
-            <h3>About Us</h3>
+            <h3>{language === 'PL' ? 'O Nas' : 'About Us'}</h3>
             <p>
-              At Kontuszowa, we believe in preserving the rich traditions of Polish vodka making. Our unique recipe has been passed down through generations.
+            {language === 'PL' ? 'W Kontuszowej, wierzymy w zachowanie dobrych, bogatych tradycji polskiego wódkotwórstwa. Nasze przepisy i tradycje są przekazywane od pokoleń' : 'At Kontuszowa, we believe in preserving the rich traditions of Polish vodka making. Our unique recipe has been passed down through generations.'}
             </p>
           </section>
   

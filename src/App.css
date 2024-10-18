@@ -122,6 +122,20 @@ body, html {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+.language-switcher {
+  color:white;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.language-switcher:hover {
+  opacity: 0.7;
+}
+
 .App-header::before {
   content: "";
   position: absolute;
