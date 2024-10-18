@@ -1,0 +1,71 @@
+/* General styling for the section */
+.App-section {
+    padding: 50px 20px;
+    background-color: #1c1c1e;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Center the entire section content */
+  .product {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the container horizontally */
+    margin: 40px auto; /* Center the whole product container */
+    max-width: 900px; /* Adjust the max width to fit the content */
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  .product-image {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .product-description {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .product h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .product p {
+    font-size: 16px;
+  }
+  
+  /* Left-side product layout */
+  .product-left {
+    justify-content: flex-start;
+  }
+  
+  /* Right-side product layout (image on the right) */
+  .product-right {
+    justify-content: flex-start;
+    flex-direction: row-reverse; /* Image on the right */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .product {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .product-left,
+    .product-right {
+      flex-direction: column;
+    }
+  
+    .product-image {
+      margin-bottom: 20px;
+    }
+  
+    .product-description {
+      text-align: center;
+    }
+  }
+  
