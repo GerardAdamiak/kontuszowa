@@ -1,0 +1,27 @@
+/* General layout for the product page */
+.product-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #1c1c1e;
+    color: white;
+  }
+  
+  /* Styling for the image container */
+  .product-image-container {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .product-image-large {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Set a max width to prevent it from being too large */
+    height: auto;
+  }
+  
+  /* Styling for the description container */
+  .product-description-container {
+    flex:auto;
+  }

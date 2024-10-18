@@ -1,6 +1,7 @@
 // Products.js
 import React from 'react';
 import './Products.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
 
 function Products({ language }) {
   React.useEffect(() => {
@@ -19,7 +20,9 @@ function Products({ language }) {
 
         {/* First product section (left) */}
         <div className="product product-left">
-          <img src="./butelka.png" alt="Bottle" className="product-image" />
+          <Link to="/products/classic">
+            <img src="./butelka.png" alt="Bottle" className="product-image" />
+          </Link>
           <div className="product-description">
             <h2>{language === 'PL' ? 'Kontuszowa Klasyczna' : 'Kontuszowa Classic'}</h2>
             <p>
@@ -32,7 +35,9 @@ function Products({ language }) {
 
         {/* Second product section (right) */}
         <div className="product product-right">
-          <img src="./butelka.png" alt="Bottle" className="product-image" />
+          <Link to="/products/premium">
+            <img src="./butelka.png" alt="Bottle" className="product-image" />
+          </Link>
           <div className="product-description">
             <h2>{language === 'PL' ? 'Kontuszowa Premium' : 'Kontuszowa Premium'}</h2>
             <p>
@@ -45,7 +50,9 @@ function Products({ language }) {
 
         {/* Third product section (left) */}
         <div className="product product-left">
-          <img src="./butelka.png" alt="Bottle" className="product-image" />
+          <Link to="/products/gold">
+            <img src="./butelka.png" alt="Bottle" className="product-image" />
+          </Link>
           <div className="product-description">
             <h2>{language === 'PL' ? 'Kontuszowa Złota' : 'Kontuszowa Gold'}</h2>
             <p>

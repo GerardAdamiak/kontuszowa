@@ -49,10 +49,10 @@ function App() {
           {/* Dropdown Menu for Mobile */}
           {isMobile && isOpen && (
             <ul className="dropdown">
-              <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
-              <li><Link to="/products" onClick={toggleMenu}>Products</Link></li>
-              <li><Link to="/about-us" onClick={toggleMenu}>About Us</Link></li>
-              <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+              <li><Link to="/" onClick={toggleMenu}>{language === 'PL' ? 'Start' : 'Home'}</Link></li>
+              <li><Link to="/products" onClick={toggleMenu}>{language === 'PL' ? 'Produkty' : 'Products'}</Link></li>
+              <li><Link to="/about-us" onClick={toggleMenu}>{language === 'PL' ? 'O Nas' : 'About Us'}</Link></li>
+              <li><Link to="/contact" onClick={toggleMenu}>{language === 'PL' ? 'Kontakt' : 'Contact'}</Link></li>
             </ul>
           )}
 
@@ -75,6 +75,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/products" element={<Products language={language} />} />
+          <Route path="/products/gold" element={<Products language={language} />} />
+          <Route path="/products/premium" element={<Products language={language} />} />
+          <Route path="/products/classic" element={<Products language={language} />} />
           <Route path="/about-us" element={<AboutUs language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
         </Routes>
