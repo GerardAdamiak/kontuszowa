@@ -56,6 +56,10 @@
               </div>
             ) : null}
 
+              <div className="logo">
+                Kontuszowa
+              </div>
+
             {/* Dropdown Menu for Mobile */}
             {isMobile && isOpen && (
               <ul className="dropdown">

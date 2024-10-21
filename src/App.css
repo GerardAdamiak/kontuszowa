@@ -11,6 +11,16 @@ body, html {
   height: 100%; /* Ensure body and html take full height */
   overflow-x: hidden; /* Prevent horizontal overflow */
   font-family: 'Metamorphous', static;
+  
+}
+
+.logo{
+  font-family: 'Metamorphous', static;
+  color: #fff;
+  position: absolute;
+  left: 2%;
+  font-size: 20px;
+  top: 25%;
 }
 
 /* Ensures the app takes full height and prevents overflow */
@@ -24,6 +34,7 @@ body, html {
 /* App-header styles */
 .App-header {
   background-image: url('./background.png');
+  background-color: #1c1c1e;
   background-size: cover;
   background-position: center;
   min-height: 70vh;

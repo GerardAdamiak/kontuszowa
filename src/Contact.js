@@ -2,10 +2,9 @@
 import React from 'react';
 
 function Contact({ language }) {
-    React.useEffect(() => {
-      document.title =  'PL' ? 'Kontuszowa Kontakt' : 'Kontuszowa O Nas';
-    }, []);
-  
+  React.useEffect(() => {
+    document.title = language === 'PL' ? 'Kontuszowa Kontakt' : 'Kontuszowa Contacts';
+  }, [language]);
     return (
       <div className="App">
         
