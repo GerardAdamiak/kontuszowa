@@ -71,6 +71,10 @@ body, html {
   width: 100%; /* Ensure it takes full width */
 }
 
+.App > *:not(footer) {
+  flex-grow: 1;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   /* Other styles remain the same... */
