@@ -6,12 +6,14 @@ import Home from './Home';
 import Products from './Products';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
+import AgeVerification from './AgeVerification'; // Import the new component
 import menuIcon from './menu-icon.png'; // Replace with your actual menu icon path
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [language, setLanguage] = useState('EN'); // Initial language state
+  const [isVerified, setIsVerified] = useState(false); // Age verification state
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -34,6 +36,11 @@ function App() {
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'EN' ? 'PL' : 'EN'));
   };
+
+  // Check if the user is verified before rendering the rest of the app
+  if (!isVerified) {
+    return <AgeVerification setIsVerified={setIsVerified} />;
+  }
 
   return (
     <div className="App">
