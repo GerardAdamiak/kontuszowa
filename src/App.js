@@ -6,6 +6,9 @@ import Home from './Home';
 import Products from './Products';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
+import ClassicProduct from './ClassicProduct'
+import PremiumProduct from './PremiumProduct'
+import GoldProduct from './GoldProduct'
 import AgeVerification from './AgeVerification'; // Import the new component
 import menuIcon from './menu-icon.png'; // Replace with your actual menu icon path
 
@@ -82,9 +85,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/products" element={<Products language={language} />} />
-          <Route path="/products/gold" element={<Products language={language} />} />
-          <Route path="/products/premium" element={<Products language={language} />} />
-          <Route path="/products/classic" element={<Products language={language} />} />
+          <Route path="/products/gold" element={<GoldProduct language={language} />} />
+          <Route path="/products/premium" element={<PremiumProduct language={language} />} />
+          <Route path="/products/classic" element={<ClassicProduct language={language} />} />
           <Route path="/about-us" element={<AboutUs language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
         </Routes>

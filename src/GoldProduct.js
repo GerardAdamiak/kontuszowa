@@ -1,12 +1,12 @@
 // ClassicProduct.js
 import React from 'react';
-import './ProductPage.css'; // Assuming you use a single CSS file for styling all product pages
+import './ProductPages.css'; // Assuming you use a single CSS file for styling all product pages
 
 function ClassicProduct({ language }) {
   return (
     <div className="product-page">
       <div className="product-image-container">
-        <img src="./classic-bottle.png" alt="Kontuszowa Classic" className="product-image-large" />
+        <img src="./butelka.png" alt="Kontuszowa Classic" className="product-image-large" />
       </div>
       <div className="product-description-container">
         <h1>{language === 'PL' ? 'Kontuszowa Klasyczna' : 'Kontuszowa Classic'}</h1>

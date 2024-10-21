@@ -8,7 +8,9 @@ const AgeVerification = ({ setIsVerified }) => {
   const [fadeOut, setFadeOut] = useState(false); // State to trigger fade-out
 
   const handleYesClick = () => {
+    setTimeout(() => {
     setAnimateLeftImage(true);
+    }, 1600);
     setFadeOut(true); // Trigger fade-out effect
     setTimeout(() => {
       setShowMirroredImage(true); // Show mirrored image after animation starts
@@ -24,7 +26,9 @@ const AgeVerification = ({ setIsVerified }) => {
   };
 
   return (
+    
     <div className="age-verification">
+      
       {/* Image on the left side with the sliding animation */}
       <img
         src={handImage}
@@ -33,12 +37,15 @@ const AgeVerification = ({ setIsVerified }) => {
       />
 
       {/* Age verification text and buttons with fade-out */}
+      <div className='metamorphous-regular'>
+        
       <div className={`age-verification-content ${fadeOut ? 'fade-out' : ''}`}>
         <h1>Are you of legal drinking age?</h1>
         <div className="buttons">
           <button onClick={handleYesClick}>Yes</button>
           <button onClick={handleNoClick}>No</button>
         </div>
+      </div>
       </div>
 
       {/* Mirrored image appears when "Yes" is clicked */}
