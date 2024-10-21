@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import handImage from './hand.png'; // Import the image
 
+
 const AgeVerification = ({ setIsVerified }) => {
   const [showMirroredImage, setShowMirroredImage] = useState(false);
-  const [animateLeftImage, setAnimateLeftImage] = useState(false); // New state to animate the left image
+  const [animateLeftImage, setAnimateLeftImage] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false); // State to trigger fade-out
 
   const handleYesClick = () => {
-    setAnimateLeftImage(true); // Trigger animation for the left image
+    setAnimateLeftImage(true);
+    setFadeOut(true); // Trigger fade-out effect
     setTimeout(() => {
-      setShowMirroredImage(true); // Show mirrored image after the left image starts animating
-    }, 10); // Adjust time to sync animations
+      setShowMirroredImage(true); // Show mirrored image after animation starts
+    }, 10);
     setTimeout(() => {
-      setIsVerified(true); // After animation, mark as verified
-    }, 2500); // Adjust time based on animation duration
+      setIsVerified(true); // After fade-out, mark as verified
+    }, 2500); // Ensure this matches the CSS transition duration (1s)
   };
 
   const handleNoClick = () => {
     alert('You must be of legal age to access this site.');
-    setIsVerified(false);  // Redirect or block access
+    setIsVerified(false); // Redirect or block access
   };
 
   return (
@@ -26,11 +29,11 @@ const AgeVerification = ({ setIsVerified }) => {
       <img
         src={handImage}
         alt="Hand holding a glass of whiskey"
-        className={`whiskey-image ${animateLeftImage ? 'slideInLeft' : ''}`} // Add the animation class conditionally
+        className={`whiskey-image ${animateLeftImage ? 'slideInLeft' : ''}`}
       />
 
-      {/* Age verification text and buttons */}
-      <div className="age-verification-content">
+      {/* Age verification text and buttons with fade-out */}
+      <div className={`age-verification-content ${fadeOut ? 'fade-out' : ''}`}>
         <h1>Are you of legal drinking age?</h1>
         <div className="buttons">
           <button onClick={handleYesClick}>Yes</button>
