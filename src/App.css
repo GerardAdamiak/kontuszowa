@@ -251,6 +251,7 @@ body, html {
   opacity: 1; /* Default fully visible */
   transition: opacity 0.8s ease; /* Smooth fade-out over 1 second */
   color: #fff;
+  font-family: 'Metamorphous', static;
 }
 
 .fade-out {
@@ -320,6 +321,7 @@ body, html {
     flex-direction: row;
     justify-content: flex-start;
     padding: 2rem;
+    font-family: 'Metamorphous', static;
   }
   .hero-text-gold{
     font-size: 24px;
@@ -346,11 +348,13 @@ body, html {
   .age-verification-content {
     width: 100%;
     text-align: center;
-    top: 0%;
+    bottom: 15%;
+    font-family: 'Metamorphous', static;
   }
 
   .age-verification-content h1 {
     font-size: 1.5rem;
+    font-family: 'Metamorphous', static;
   }
 
   .buttons button {
