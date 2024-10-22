@@ -235,12 +235,18 @@ body, html {
 .buttons {
   display: flex;
   gap: 1rem;
+  
 }
 
 .buttons button {
   padding: 1rem 2rem;
   font-size: 1rem;
   cursor: pointer;
+  font-family: 'Metamorphous', static;
+  background-color: #1c1c1e;
+  border: 0;
+  color: #fff;
+  font-size: 40px;
 }
 
 /* Media Query for Mobile Screens */

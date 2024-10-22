@@ -24,7 +24,11 @@ function Products({ language }) {
             <img src="./butelka.png" alt="Bottle" className="product-image" />
           </Link>
           <div className="product-description">
+            <div className='product-link'>
+          <Link to="/products/classic">
             <h2>{language === 'PL' ? 'Kontuszowa Klasyczna' : 'Kontuszowa Classic'}</h2>
+            </Link>
+            </div>
             <p>
               {language === 'PL'
                 ? 'Nasz flagowy produkt, znany z gładkiego smaku i wysokiej jakości składników.'
@@ -38,8 +42,13 @@ function Products({ language }) {
           <Link to="/products/premium">
             <img src="./butelka.png" alt="Bottle" className="product-image" />
           </Link>
+          
           <div className="product-description">
+          <div className='product-link'>
+          <Link to="/products/premium">
             <h2>{language === 'PL' ? 'Kontuszowa Premium' : 'Kontuszowa Premium'}</h2>
+            </Link>
+            </div>
             <p>
               {language === 'PL'
                 ? 'Wódka premium o wzbogaconym smaku, idealna na specjalne okazje.'
@@ -54,7 +63,11 @@ function Products({ language }) {
             <img src="./butelka.png" alt="Bottle" className="product-image" />
           </Link>
           <div className="product-description">
+          <div className='product-link'>
+          <Link to="/products/gold">
             <h2>{language === 'PL' ? 'Kontuszowa Złota' : 'Kontuszowa Gold'}</h2>
+            </Link>
+            </div>
             <p>
               {language === 'PL'
                 ? 'Wykwintna wódka z nutami rzadkich składników i złotym wykończeniem.'

@@ -3,6 +3,9 @@ import React from 'react';
 import './ProductPages.css'; // Assuming you use a single CSS file for styling all product pages
 
 function ClassicProduct({ language }) {
+  React.useEffect(() => {
+    document.title = language === 'PL' ? 'Kontuszowa Klasyczna' : 'Kontuszowa Classic';
+  }, [language]);
   return (
     <div className="product-page">
       <div className="product-image-container">
@@ -21,7 +24,7 @@ function ClassicProduct({ language }) {
           rel="noopener noreferrer"
           className="product-button"
         >
-          {language === 'PL' ? 'Odwiedź naszą stronę' : 'Visit our website'}
+          {language === 'PL' ? 'Kup Tutaj' : 'Buy Here'}
         </a>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Home({ language }) {
   React.useEffect(() => {
-    document.title = language === 'PL' ? 'Kontuszowa Strona Główna' : 'Kontuszowa Home';
+    document.title = language === 'PL' ? 'Strona Główna' : 'Home';
   }, [language]);
 
   return (

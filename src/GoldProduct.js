@@ -2,6 +2,9 @@ import React from 'react';
 import './ProductPages.css';
 
 function GoldProduct({ language }) {
+  React.useEffect(() => {
+    document.title = language === 'PL' ? 'Kontuszowa Złota' : 'Kontuszowa Gold  ';
+  }, [language]);
   return (
     <div className="product-page">
       <div className="product-image-container">
@@ -20,7 +23,7 @@ function GoldProduct({ language }) {
           rel="noopener noreferrer"
           className="product-button"
         >
-          {language === 'PL' ? 'Odwiedź naszą stronę' : 'Visit our website'}
+          {language === 'PL' ? 'Kup Tutaj' : 'Buy Here'}
         </a>
       </div>
     </div>

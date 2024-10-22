@@ -14,31 +14,43 @@
     margin: 40px auto; /* Center the whole product container */
     max-width: 900px; /* Adjust the max width to fit the content */
     width: 100%; /* Ensure it takes full width */
+    
   }
+
+  
+
+  
   
   .product-image {
     width: 200px; /* Adjust as needed */
     height: auto;
     margin-right: 20px;
   }
-  
+  .product-link a {
+    text-decoration: none;
+    color: inherit; /* This ensures the text color remains the same as surrounding text */
+  }
   .product-description {
     max-width: 500px;
     text-align: left;
+    
   }
   
   .product h2 {
     margin-bottom: 10px;
     font-size: 28px;
+    
   }
   
   .product p {
     font-size: 16px;
+    
   }
   
   /* Left-side product layout */
   .product-left {
     justify-content: flex-start;
+    
   }
   
   /* Right-side product layout (image on the right) */
