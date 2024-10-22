@@ -20,13 +20,13 @@ function Products({ language }) {
 
         {/* First product section (left) */}
         <div className="product product-left">
-          <Link to="/products/classic">
-            <img src="./butelka.png" alt="Bottle" className="product-image" />
+          <Link to="/products/claranix">
+            <img src="./claraNix.png" alt="Bottle" className="product-image" />
           </Link>
           <div className="product-description">
             <div className='product-link'>
-          <Link to="/products/classic">
-            <h2>{language === 'PL' ? 'Kontuszowa Klasyczna' : 'Kontuszowa Classic'}</h2>
+          <Link to="/products/claranix">
+            <h2>{language === 'PL' ? 'Kontuszowa Clara Nix' : 'Kontuszowa Clara Nix'}</h2>
             </Link>
             </div>
             <p>
@@ -39,14 +39,14 @@ function Products({ language }) {
 
         {/* Second product section (right) */}
         <div className="product product-right">
-          <Link to="/products/premium">
-            <img src="./butelka.png" alt="Bottle" className="product-image" />
+          <Link to="/products/rosignis">
+            <img src="./rosIgnis.png" alt="Bottle" className="product-image" />
           </Link>
           
           <div className="product-description">
           <div className='product-link'>
-          <Link to="/products/premium">
-            <h2>{language === 'PL' ? 'Kontuszowa Premium' : 'Kontuszowa Premium'}</h2>
+          <Link to="/products/rosignis">
+            <h2>{language === 'PL' ? 'Kontuszowa Ros Ignis' : 'Kontuszowa Ros Ignis'}</h2>
             </Link>
             </div>
             <p>
@@ -59,13 +59,13 @@ function Products({ language }) {
 
         {/* Third product section (left) */}
         <div className="product product-left">
-          <Link to="/products/gold">
-            <img src="./butelka.png" alt="Bottle" className="product-image" />
+          <Link to="/products/altersol">
+            <img src="./alterSol.png" alt="Bottle" className="product-image" />
           </Link>
           <div className="product-description">
           <div className='product-link'>
-          <Link to="/products/gold">
-            <h2>{language === 'PL' ? 'Kontuszowa Złota' : 'Kontuszowa Gold'}</h2>
+          <Link to="/products/altersol">
+            <h2>{language === 'PL' ? 'Kontuszowa Alter Sol' : 'Kontuszowa Alter Sol'}</h2>
             </Link>
             </div>
             <p>

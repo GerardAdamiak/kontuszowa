@@ -7,7 +7,7 @@
   background-color: #1c1c1e;
   color: white;
   text-align: center; /* Ensure all text is centered */
-  flex-direction: column; /* Stack items vertically on all screen sizes */
+  flex-direction: row; /* Stack items vertically on all screen sizes */
 }
 
 /* Styling for the image container */
@@ -21,7 +21,7 @@
 .product-image-large {
   width: 100%;
   height: auto;
-  max-width: 400px;
+  max-width: 300px;
 }
 /* Styling for the button */
 .product-button {
@@ -49,10 +49,16 @@
 }
 
 /* Mobile-specific layout */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .product-page {
-    flex-direction: row; /* For larger screens, display items side by side */
+    flex-direction: column; /* For larger screens, display items side by side */
     text-align: left; /* Align text to the left */
+    
+  }
+  .product-image-large {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
   }
 
   .product-description-container {

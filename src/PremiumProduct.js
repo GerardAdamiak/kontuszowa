@@ -9,14 +9,14 @@ function PremiumProduct({ language }) {
   return (
     <div className="product-page">
       <div className="product-image-container">
-        <img src="/butelka.png" alt="Kontuszowa Premium" className="product-image-large" />
+        <img src="/rosIgnis.png" alt="Kontuszowa Ros Ignis" className="product-image-large" />
       </div>
       <div className="product-description-container">
-        <h1>{language === 'PL' ? 'Kontuszowa Premium' : 'Kontuszowa Premium'}</h1>
+        <h1>{language === 'PL' ? 'Kontuszowa Ros Ignis' : 'Kontuszowa Ros Ignis'}</h1>
         <p>
           {language === 'PL'
-            ? 'Kontuszowa Premium to nasz flagowy produkt, który łączy tradycję z nowoczesnością. Wykonany z najwyższej jakości składników, oferuje delikatny smak, który sprawia, że każda kropla to czysta przyjemność.'
-            : 'Kontuszowa Premium is our flagship product, combining tradition with modernity. Crafted from the finest ingredients, it offers a smooth taste, making every drop a pure delight.'}
+            ? 'Kontuszowa Ros Ignis to nasz flagowy produkt, który łączy tradycję z nowoczesnością. Wykonany z najwyższej jakości składników, oferuje delikatny smak, który sprawia, że każda kropla to czysta przyjemność.'
+            : 'Kontuszowa Ros Ignis is our flagship product, combining tradition with modernity. Crafted from the finest ingredients, it offers a smooth taste, making every drop a pure delight.'}
         </p>
         <a
           href="https://nalewki.net/"

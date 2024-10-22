@@ -59,7 +59,7 @@
               <div className="logo">
                 <div className='product-link'>
                   <Link to='/'>
-                Kontuszowa
+                <img src="/LogoKontuszowa.png" alt='kontuszowa logo'></img>
                 </Link>
                 </div>
               </div>
@@ -93,9 +93,9 @@
           <Routes>
             <Route path="/" element={<Home language={language} />} />
             <Route path="/products" element={<Products language={language} />} />
-            <Route path="/products/gold" element={<GoldProduct language={language} />} />
-            <Route path="/products/premium" element={<PremiumProduct language={language} />} />
-            <Route path="/products/classic" element={<ClassicProduct language={language} />} />
+            <Route path="/products/altersol" element={<GoldProduct language={language} />} />
+            <Route path="/products/rosignis" element={<PremiumProduct language={language} />} />
+            <Route path="/products/claranix" element={<ClassicProduct language={language} />} />
             <Route path="/about-us" element={<AboutUs language={language} />} />
             <Route path="/contact" element={<Contact language={language} />} />
           </Routes>
