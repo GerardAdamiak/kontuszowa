@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Products({ language }) {
   React.useEffect(() => {
-    document.title = language === 'PL' ? 'Kontuszowa Produkty' : 'Kontuszowa Products';
+    document.title = language === 'PL' ? 'Produkty' : 'Products';
   }, [language]);
 
   return (

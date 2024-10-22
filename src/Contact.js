@@ -3,7 +3,7 @@ import React from 'react';
 
 function Contact({ language }) {
   React.useEffect(() => {
-    document.title = language === 'PL' ? 'Kontuszowa Kontakt' : 'Kontuszowa Contacts';
+    document.title = language === 'PL' ? 'Kontakt' : 'Contacts';
   }, [language]);
     return (
       <div className="App">

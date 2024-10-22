@@ -57,7 +57,11 @@
             ) : null}
 
               <div className="logo">
+                <div className='product-link'>
+                  <Link to='/'>
                 Kontuszowa
+                </Link>
+                </div>
               </div>
 
             {/* Dropdown Menu for Mobile */}

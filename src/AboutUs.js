@@ -3,7 +3,7 @@ import React from 'react';
 
 function AboutUs({ language }) {
   React.useEffect(() => {
-    document.title = language === 'PL' ? 'Kontuszowa O Nas' : 'Kontuszowa About Us';
+    document.title = language === 'PL' ? 'O Nas' : 'About Us';
   }, [language]);
   
     return (
