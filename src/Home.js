@@ -9,7 +9,7 @@ function Home({ language }) {
   return (
     <div className="App">
       <header id="home" className="App-header">
-        <div className="hero-text">
+        <div className="hero-text-gold">
           <h1>Kontuszowa</h1>
         </div>
       </header>

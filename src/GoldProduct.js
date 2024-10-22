@@ -18,7 +18,7 @@ function GoldProduct({ language }) {
             : 'Kontuszowa Gold is our flagship product, combining tradition with modernity. Crafted from the finest ingredients, it offers a smooth taste, making every drop a pure delight.'}
         </p>
         <a
-          href="https://www.example.com"
+          href="https://nalewki.net/"
           target="_blank"
           rel="noopener noreferrer"
           className="product-button"

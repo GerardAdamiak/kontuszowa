@@ -34,7 +34,7 @@ body, html {
 /* App-header styles */
 .App-header {
   background-image: url('./background.png');
-  background-color: #1c1c1e;
+ background-color: #1c1c1e;
   background-size: cover;
   background-position: center;
   min-height: 70vh;
@@ -69,7 +69,7 @@ body, html {
 .App-section {
   flex: 1; /* This allows the section to grow and fill the available space */
   padding: 50px 20px;
-  background-color: #1c1c1e;
+  background-color: #282c34;
   color: #fff;
 }
 
@@ -129,13 +129,70 @@ body, html {
   color: #61dafb;
 }
 
-.hero-text {
-  color: white;
+.hero-text-gold {
   font-size: 48px;
   font-weight: bold;
   z-index: 2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  
+  /* Apply the background image */
+  background-image: url('./zloty32.png');
+  background-size: 200% 100%; /* Make the background wider for animation */
+  background-position: 0 0; /* Start at the left */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
+  /* Add the animation */
+  animation: moveBackground 5s linear infinite;
 }
+
+.hero-text-silver {
+  font-size: 48px;
+  font-weight: bold;
+  z-index: 2;
+  
+  /* Apply the background image */
+  background-image: url('./srebrny.jpg');
+  background-size: 200% 100%; /* Make the background wider for animation */
+  background-position: 0 0; /* Start at the left */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
+  /* Add the animation */
+  animation: moveBackground 5s linear infinite;
+}
+.hero-text-red {
+  font-size: 48px;
+  font-weight: bold;
+  z-index: 2;
+  
+  /* Apply the background image */
+  background-image: url('./czerwony.jpg');
+  background-size: 200% 100%; /* Make the background wider for animation */
+  background-position: 0 0; /* Start at the left */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
+  /* Add the animation */
+  animation: moveBackground 5s linear infinite;
+}
+
+/* Keyframes for moving the background from left to right */
+@keyframes moveBackground {
+  0% {
+    background-position: 200% 0; /* Start from the left */
+  }
+  100% {
+    background-position: 0 0; /* Move to the right */
+  }
+}
+
+
 
 .language-switcher {
   color:white;
@@ -256,7 +313,15 @@ body, html {
     justify-content: flex-start;
     padding: 2rem;
   }
-
+  .hero-text-gold{
+    font-size: 24px;
+  }
+  .hero-text-red{
+    font-size: 24px;
+  }
+  .hero-text-silver{
+    font-size: 24px;
+  }
   .whiskey-image {
     width: 50%;
     height: auto; /* Maintain aspect ratio */
@@ -293,7 +358,7 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+
   z-index: 1;
   width: 100%;
 }
