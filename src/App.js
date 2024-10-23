@@ -15,7 +15,7 @@
   function App() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-    const [language, setLanguage] = useState('EN'); // Initial language state
+    const [language, setLanguage] = useState('PL'); // Initial language state
     const [isVerified, setIsVerified] = useState(false); // Age verification state
 
     const toggleMenu = () => {
@@ -37,13 +37,14 @@
 
     // Toggle between languages
     const toggleLanguage = () => {
-      setLanguage((prevLanguage) => (prevLanguage === 'EN' ? 'PL' : 'EN'));
+      setLanguage((prevLanguage) => (prevLanguage === 'PL' ? 'EN' : 'PL'));
     };
 
     // Check if the user is verified before rendering the rest of the app
     if (!isVerified) {
-      return <AgeVerification setIsVerified={setIsVerified} />;
+      return <AgeVerification setIsVerified={setIsVerified} language={language} />;
     }
+    
 
     return (
       <div className="App">

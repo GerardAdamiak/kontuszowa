@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import handImage from './hand.png'; // Import the image
 
 
-const AgeVerification = ({ setIsVerified }) => {
+const AgeVerification = ({ setIsVerified, language }) => {
+  React.useEffect(() => {
+    document.title = language === 'PL' ? 'Weryfikacja Wieku' : 'Age Verification';
+  }, [language]);
   const [showMirroredImage, setShowMirroredImage] = useState(false);
   const [animateLeftImage, setAnimateLeftImage] = useState(false);
   const [fadeOut, setFadeOut] = useState(false); // State to trigger fade-out
@@ -21,7 +24,14 @@ const AgeVerification = ({ setIsVerified }) => {
   };
 
   const handleNoClick = () => {
-    alert('You must be of legal age to access this site.');
+    if(language === 'PL'){
+      alert('Musisz być pełnoletni, by wejść na tą stronę.');
+    }
+    else{
+      alert('You must be of legal age to access this site.');
+    }
+      
+    
     setIsVerified(false); // Redirect or block access
   };
 
@@ -40,10 +50,10 @@ const AgeVerification = ({ setIsVerified }) => {
       <div className='metamorphous-regular'>
         
       <div className={`age-verification-content ${fadeOut ? 'fade-out' : ''}`}>
-        <h1>Are you of legal drinking age?</h1>
+        <h1>{language === 'PL' ? 'Czy masz ukończone 18 lat?' : 'Are you of legal drinking age?'}</h1>
         <div className="buttons">
-          <button onClick={handleYesClick}>Yes</button>
-          <button onClick={handleNoClick}>No</button>
+          <button onClick={handleYesClick}>{language === 'PL' ? 'Tak' : 'Yes'}</button>
+          <button onClick={handleNoClick}>{language === 'PL' ? 'Nie' : 'No'}</button>
         </div>
       </div>
       </div>
