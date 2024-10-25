@@ -96,21 +96,7 @@ body, html {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-  /* Other styles remain the same... */
-  
-  .App-footer {
-    margin-top: auto; /* Push to the bottom on mobile */
-  }
 
-  .App-header {
-    
-    height: 20vh;
-    
-   
-  }
-  
-}
 
 /* Navbar styles */
 .navbar {
@@ -396,6 +382,8 @@ body, html {
   width: 100%;
 }
 
+
+
 .centered-text-with-images {
   display: flex;
   align-items: center;
@@ -546,3 +534,5 @@ body, html {
     margin: 0 10px; /* Spacing between menu items */
   }
 }
+
+
