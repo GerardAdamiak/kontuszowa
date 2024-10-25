@@ -416,9 +416,70 @@ body, html {
 
 /* === Responsive Styles === */
 @media (max-width: 768px) {
+
+  .menu-icon {
+    position: static;
+    margin-left: 1%;
+    
+      z-index: 1000; /* This is good */
+    
+    
+  }
+
+  /* Center logo in navbar on mobile */
+@media (max-width: 768px) {
+  /* Navbar adjustments for mobile */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  /* Center logo */
+  .logo {
+    position: static;
+    margin: 0 auto; /* Center the logo horizontally */
+    max-width: 175px; /* Adjust size as needed */
+    margin-left: 20vw;
+  }
+
+  /* Navbar links */
+  .navbar ul {
+    display: none; /* Hide links to use dropdown */
+  }
+
+  /* Dropdown menu adjustments */
+  .dropdown {
+    position: absolute;
+    top: 100%; /* Place dropdown below navbar */
+    left: 10px; /* Align dropdown to the left */
+    width: 200px;
+    background-color: #1c1c1e;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Dropdown item styles */
+  .dropdown li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .dropdown li a:hover {
+    color: #61dafb;
+  }
+}
+
+
   .navbar ul {
     flex-direction: column;
     padding: 0;
+    
   }
 
   .navbar ul li {
@@ -447,6 +508,16 @@ body, html {
 
   .App-section p {
     font-size: 16px;
+  }
+
+  .language-switcher {
+    color:white;
+    position: absolute;
+    top: 30%;
+    right: 3vw;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 }
 
