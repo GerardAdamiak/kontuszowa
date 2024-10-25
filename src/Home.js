@@ -14,13 +14,14 @@ function Home({ language }) {
             </header>
 
             <section className="intro-section">
-                <h2>{language === 'PL' ? 'Polska Tradycyjna Wódka Premium' : 'Premium Polish Vodka'}</h2>
-                <p>{language === 'PL' ? 'Witamy w Kontuszowej...' : 'Welcome to Kontuszowa...'}</p>
+                
+                <h2> {language === 'PL' ? 'Witamy w Kontuszowej, marce wykwintnej, tradycyjnie destylowanej polskiej wódki. Każda butelka to święto autentyczności.' :
+                 'Welcome to Kontuszowa, a brand of exquisite, traditionally distilled Polish vodka. Crafted with care and heritage, every bottle is a celebration of authenticity.'} </h2>
             </section>
 
             <section className="centered-text-with-images">
                 <img src="szlachta1.png" alt="Szlachta 1" className="szlachta-image" />
-                <h2>OBUDŹ W SOBIE SZLACHTĘ</h2>
+                <h2>{language === 'PL' ? 'OBUDŹ W SOBIE SZLACHTĘ' : 'FIND YOUR NOBLE SELF'}</h2>
                 <img src="szlachta2.png" alt="Szlachta 2" className="szlachta-image" />
             </section>
         </div>

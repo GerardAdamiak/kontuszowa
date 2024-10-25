@@ -407,17 +407,24 @@ body, html {
 }
 
 .centered-text-with-images h2 {
-  font-size: 6vw;
+  font-size: 8vw;
   color: #fff;
   font-family: 'Metamorphous', sans-serif;
 
 }
 
 .szlachta-image {
-  width: 25vw;
+  width: 40vw;
   height: auto;
+  opacity: 0.3
+}
+.szlachta-image:first-of-type {
+  margin-left: -10vw; /* Move left image partially out of view */
 }
 
+.szlachta-image:last-of-type {
+  margin-right: -10vw; /* Move right image partially out of view */
+}
 
 /* === Responsive Styles === */
 @media (max-width: 768px) {
