@@ -114,7 +114,7 @@ body, html {
 
 /* Navbar styles */
 .navbar {
-  background-color: #1c1c1e; /* Navbar color */
+  background-color: #101015; /* Navbar color */
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -340,13 +340,13 @@ body, html {
     font-family: 'Metamorphous', static;
   }
   .hero-text-gold{
-    font-size: 24px;
+    font-size: 6vw;
   }
   .hero-text-red{
-    font-size: 24px;
+    font-size: 6vw;
   }
   .hero-text-silver{
-    font-size: 24px;
+    font-size: 6vw;
   }
   .whiskey-image {
     width: 50%;
@@ -395,6 +395,29 @@ body, html {
   z-index: 1;
   width: 100%;
 }
+
+.centered-text-with-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #1c1c1e;
+}
+
+.centered-text-with-images h2 {
+  font-size: 6vw;
+  color: #fff;
+  font-family: 'Metamorphous', sans-serif;
+
+}
+
+.szlachta-image {
+  width: 25vw;
+  height: auto;
+}
+
 
 /* === Responsive Styles === */
 @media (max-width: 768px) {
