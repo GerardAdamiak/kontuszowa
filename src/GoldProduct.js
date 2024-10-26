@@ -11,6 +11,7 @@ function GoldProduct({ language }) {
         <img src="/alterSol.png" alt="Kontuszowa Gold" className="product-image-large" />
       </div>
       <div className="product-description-container">
+      <div className="product-description-background">
         <h1>{language === 'PL' ? 'Kontuszowa Alter Sol' : 'Kontuszowa Alter Sol'}</h1>
         <p>
           {language === 'PL'
@@ -25,6 +26,7 @@ function GoldProduct({ language }) {
         >
           {language === 'PL' ? 'Kup Tutaj' : 'Buy Here'}
         </a>
+      </div>
       </div>
     </div>
   );

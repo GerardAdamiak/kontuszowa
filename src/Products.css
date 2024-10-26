@@ -24,7 +24,10 @@
   .product-image {
     width: 150px; /* Adjust as needed */
     height: auto;
-    margin: 20px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
 
   }
   .product-link a {
@@ -34,7 +37,11 @@
   .product-description {
     max-width: 500px;
     text-align: left;
-    
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+
   }
   
   .product h2 {

@@ -12,6 +12,7 @@ function PremiumProduct({ language }) {
         <img src="/rosIgnis.png" alt="Kontuszowa Ros Ignis" className="product-image-large" />
       </div>
       <div className="product-description-container">
+      <div className="product-description-background">
         <h1>{language === 'PL' ? 'Kontuszowa Ros Ignis' : 'Kontuszowa Ros Ignis'}</h1>
         <p>
           {language === 'PL'
@@ -26,6 +27,7 @@ function PremiumProduct({ language }) {
         >
           {language === 'PL' ? 'Kup Tutaj' : 'Buy Here'}
         </a>
+      </div>
       </div>
     </div>
   );

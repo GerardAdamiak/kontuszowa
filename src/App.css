@@ -67,6 +67,7 @@ body, html {
 .intro-section h2 {
   color: #d9dcd6;
   margin-bottom: 20px;
+  font-size: 2.5vw;
 }
 
 .intro-section p {
@@ -225,7 +226,7 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #2f6690;
+  background-color: #16425b;
   position: relative;
   overflow: hidden;
 }
@@ -312,7 +313,7 @@ body, html {
   font-size: 1rem;
   cursor: pointer;
   font-family: 'Metamorphous', static;
-  background-color: #2f6690;
+  background-color: #16425b;
   border: 0;
   color: #d9dcd6;
   font-size: 40px;

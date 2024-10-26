@@ -10,6 +10,16 @@
   flex-direction: row; /* Stack items vertically on all screen sizes */
 }
 
+/* Rectangle background for the description and button */
+.product-description-background {
+  background-color: #2d5f82; /* Slightly lighter than the page background */
+  padding: 20px;
+  border-radius: 8px; /* Slight rounded corners */
+  display:block; /* Adjust width to content */
+  text-align: center;
+}
+
+
 /* Styling for the image container */
 .product-image-container {
   width: 100%;
