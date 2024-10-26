@@ -19,6 +19,7 @@ function Products({ language }) {
         </p>
 
         {/* First product section (left) */}
+        <div className='products'>
         <div className="product product-left">
           <Link to="/products/claranix">
             <img src="./claraNix.png" alt="Bottle" className="product-image" />
@@ -74,6 +75,7 @@ function Products({ language }) {
                 : 'An exquisite vodka, featuring hints of rare ingredients and a golden finish.'}
             </p>
           </div>
+        </div>
         </div>
       </section>
     </div>

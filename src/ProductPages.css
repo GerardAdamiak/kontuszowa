@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px;
-  background-color: #1c1c1e;
+  background-color: #1d4d72;
   color: white;
   text-align: center; /* Ensure all text is centered */
   flex-direction: row; /* Stack items vertically on all screen sizes */
@@ -28,7 +28,7 @@
   display: inline-block;
   padding: 12px 24px;
   margin-top: 20px;
-  background-color: #414754;
+  background-color: #3a7ca5;
   color: white;
   text-align: center;
   font-size: 16px;
@@ -39,7 +39,7 @@
 }
 
 .product-button:hover {
-  background-color: #282c34;
+  background-color: #16425b;
  
 }
 

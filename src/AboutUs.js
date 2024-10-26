@@ -13,7 +13,7 @@ function AboutUs({ language }) {
   
           <header id="home" className="App-header">
             <div className="hero-text-gold">
-              <h1>Kontuszowa</h1>
+            
             </div>
           </header>
   

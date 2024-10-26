@@ -39,37 +39,38 @@ body, html {
   min-height: 100vh; /* Full height for flexbox */
 }
 
-/* App-header styles */
 .App-header {
-  background-image: url('./background.png');
- background-color: #222222;
-  background-size: cover;
-  background-position: center;
-  min-height: 50vh;
+  background-image: url('./LogoKontuszowa.png');
+  background-color: #2f6690;
+  background-size: 90%; /* Adjust to a smaller size like 50% */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  min-height: 40vh;
   max-height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center vertically */
+  align-items: center;
   position: relative;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%;
 }
+
 
 /* Intro section styles */
 .intro-section {
   flex: 1; /* This allows the intro section to grow and fill the available space */
-  padding: 50px 20px;
-  background-color: #1c1c1e;
-  color: #fff;
+  padding: 50px 20vw;
+  background-color: #1d4d72;
+  color: #d9dcd6;
   text-align: center;
 }
 
 .intro-section h2 {
-  color: #fff;
+  color: #d9dcd6;
   margin-bottom: 20px;
 }
 
 .intro-section p {
-  color: #fff;
+  color: #d9dcd6;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -78,7 +79,7 @@ body, html {
 .App-section {
   flex: 1; /* This allows the section to grow and fill the available space */
   padding: 50px 20px;
-  background-color: #363c47;
+  background-color: #16425b;
   color: #fff;
 }
 
@@ -100,7 +101,7 @@ body, html {
 
 /* Navbar styles */
 .navbar {
-  background-color: #101015; /* Navbar color */
+  background-color: #16425b; /* Navbar color */
   padding: 10px 0;
   position: fixed;
   top: 0;
@@ -224,7 +225,7 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #1c1c1e;
+  background-color: #2f6690;
   position: relative;
   overflow: hidden;
 }
@@ -252,7 +253,7 @@ body, html {
   width: 50%;
   opacity: 1; /* Default fully visible */
   transition: opacity 0.8s ease; /* Smooth fade-out over 1 second */
-  color: #fff;
+  color: #d9dcd6;
   font-family: 'Metamorphous', static;
 }
 
@@ -311,9 +312,9 @@ body, html {
   font-size: 1rem;
   cursor: pointer;
   font-family: 'Metamorphous', static;
-  background-color: #1c1c1e;
+  background-color: #2f6690;
   border: 0;
-  color: #fff;
+  color: #d9dcd6;
   font-size: 40px;
 }
 
@@ -391,12 +392,12 @@ body, html {
   gap: 20px;
   padding: 20px;
   text-align: center;
-  background-color: #1c1c1e;
+  background-color: #16425b;
 }
 
 .centered-text-with-images h2 {
   font-size: 8vw;
-  color: #fff;
+  color: #d9dcd6;
   font-family: 'Metamorphous', sans-serif;
 
 }
@@ -404,7 +405,7 @@ body, html {
 .szlachta-image {
   width: 40vw;
   height: auto;
-  opacity: 0.3
+  opacity: 1;
 }
 .szlachta-image:first-of-type {
   margin-left: -10vw; /* Move left image partially out of view */

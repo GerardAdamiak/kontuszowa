@@ -12,7 +12,7 @@ function Contact({ language }) {
   
           <header id="home" className="App-header">
             <div className="hero-text-red">
-              <h1>Kontuszowa</h1>
+              
             </div>
           </header>
   
