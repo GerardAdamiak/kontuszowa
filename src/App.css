@@ -67,7 +67,7 @@ body, html {
 .intro-section h2 {
   color: #d9dcd6;
   margin-bottom: 20px;
-  font-size: 2.5vw;
+  font-size: 2vw;
 }
 
 .intro-section p {
@@ -404,16 +404,18 @@ body, html {
 }
 
 .szlachta-image {
-  width: 40vw;
+  
   height: auto;
   opacity: 1;
 }
 .szlachta-image:first-of-type {
-  margin-left: -10vw; /* Move left image partially out of view */
+  margin-left: -13vw; /* Move left image partially out of view */
+  width: 40vw;
 }
 
 .szlachta-image:last-of-type {
   margin-right: -10vw; /* Move right image partially out of view */
+  width: 30vw;
 }
 
 /* === Responsive Styles === */
