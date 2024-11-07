@@ -8,7 +8,7 @@ function Contact({ language }) {
     return (
       <div className="App">
         
-            
+{/*             
   
           <header id="home" className="App-header">
             <div className="hero-text-red">
@@ -16,7 +16,7 @@ function Contact({ language }) {
             </div>
           </header>
   
-          
+           */}
           
           <section id="contact" className="App-section">
             <h3>{language === 'PL' ? 'Skontaktuj się z Nami' : 'Contact Us'}</h3>

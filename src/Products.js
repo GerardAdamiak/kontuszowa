@@ -12,7 +12,7 @@ function Products({ language }) {
     <div className="App">
       <section id="products" className="App-section">
         <h1>{language === 'PL' ? 'Produkty' : 'Products'}</h1>
-        <p>
+        <p id='product-intro'>
           {language === 'PL'
             ? 'Odkryj naszą gamę premium wódek, każda butelka wytwarzana z najwyższej jakości składników.'
             : 'Explore our range of premium vodkas, each bottle crafted with the finest ingredients.'}

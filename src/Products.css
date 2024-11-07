@@ -1,8 +1,19 @@
 /* General styling for the section */
+:root {
+  --light-cream: #563920;
+  --light-tan: #e6ccb2;
+  --soft-brown: #ddb892;
+  --warm-brown: #ede0d4;
+  --dark-brown: #ede0d4;
+  --reddish-brown: #9c6644;
+}
+
+
+
 .App-section {
     padding: 50px 20px;
-    background-color: #1d4d72;
-    color: white;
+    background-color: var(--dark-brown);
+    color: var(--light-cream);
     text-align: center;
   }
   
@@ -58,7 +69,18 @@
   /* Left-side product layout */
   .product-left {
     justify-content: flex-start;
-    background-color: #16425b;
+    background-color: var(--soft-brown);
+    
+  }
+  .product-right h2{
+   
+    color: var(--soft-brown);
+    
+  }
+
+  .product-right p{
+   
+    color: var(--soft-brown);
     
   }
   
@@ -66,7 +88,7 @@
   .product-right {
     justify-content: flex-start;
     flex-direction: row-reverse; /* Image on the right */
-    background-color: #10364c;
+    background-color: var(--reddish-brown);
   }
   
   /* Media Queries for responsiveness */

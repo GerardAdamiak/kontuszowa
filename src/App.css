@@ -5,6 +5,15 @@
   box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
 }
 
+:root {
+  --light-cream: #563920;
+  --light-tan: #e6ccb2;
+  --soft-brown: #ddb892;
+  --warm-brown: #ede0d4;
+  --dark-brown: #ede0d4;
+  --reddish-brown: #9c6644;
+}
+
 body, html {
   margin: 0; /* Reset default margin */
   padding: 0; /* Reset default padding */
@@ -37,58 +46,131 @@ body, html {
   flex-direction: column;
   text-align: center;
   min-height: 100vh; /* Full height for flexbox */
+  
+    background-color: var(--dark-brown);
+  
 }
 
 .App-header {
-  background-image: url('./LogoKontuszowa.png');
-  background-color: #2f6690;
-  background-size: 80%; /* Adjust to a smaller size like 50% */
+  background-image: url('./hero.png');
+  background-color: #f8ebe0;
+  background-size: contain; /* Keeps the image proportions */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center 66%; /* Centers the image */
-  min-height: 40vh;
-  max-height: 50vh;
+  background-position: center bottom; /* Positions the image at the bottom center */
+  min-height: 100vh; /* Full viewport height */
+
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+}
+
+
+
+
+.intro-section {
+  flex: 1; /* This allows the intro section to grow and fill the available space */
+  padding: 50px 15vw;
+  margin-bottom: 40px;
+  
+  background-image: url('./pergaminDol.png');
+  background-color: var(--dark-brown);
+  background-size: contain; /* Keeps the image proportions */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center top; /* Positions the image at the bottom center */
+  min-height: 100vh; /* Full viewport height */
+  color: var(--light-cream);
+  text-align: center;
   
 }
 
-
-/* Intro section styles */
-.intro-section {
-  flex: 1; /* This allows the intro section to grow and fill the available space */
-  padding: 50px 20vw;
-  background-color: #1d4d72;
-  color: #d9dcd6;
-  text-align: center;
+.intro-section h2 {
+  color: var(--light-cream);
+  
+  margin-bottom: 20px;
+  margin-left: 25vw;
+  margin-right: 13vw;
+  font-size: 2vw;
+  line-height: 2;
 }
 
-.intro-section h2 {
-  color: #d9dcd6;
+.App-section h3{
+  color: var(--light-cream);
+  background-color: var(--dark-brown);
+  margin-bottom: 20px;
+  font-size: 2vw;
+}
+
+.App-section {
+  background-color: var(--light-cream);
+  margin-bottom: 20px;
+  font-size: 2vw;
+}
+
+#about, #contact {
+  background-color: var(--dark-brown);
+
+}
+
+#about p{
+  padding-left: 15%;
+  padding-right: 15%;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+
+#product-intro{
+  padding-left: 20%;
+  padding-right: 20%;
+  line-height: 40px;
+
+  font-size: 20px;
+}
+
+#products p{
+
+  font-size: 20px;
+}
+
+
+#contact p{
+  
+
+  font-size: medium;
+}
+
+#contact h3{
+  
+padding-bottom: 20px;
+}
+
+
+.App-section p{
+  color: var(--light-cream);
   margin-bottom: 20px;
   font-size: 2vw;
 }
 
 .intro-section p {
-  color: #d9dcd6;
+  color: var(--light-cream);
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* App-section styles */
+/* App-section styles */
 .App-section {
   flex: 1; /* This allows the section to grow and fill the available space */
   padding: 50px 20px;
-  background-color: #16425b;
-  color: #fff;
+  background-color: var(--warm-brown);
+  color: var(--light-cream);
 }
 
 /* Footer styles */
 .App-footer {
-  background-color: #282c34;
-  color: white;
+  background-color: var(--light-cream);
+  color: var(--dark-brown);
   padding: 10px;
   text-align: center;
   width: 100%; /* Ensure it takes full width */
@@ -103,7 +185,7 @@ body, html {
 
 /* Navbar styles */
 .navbar {
-  background-color: #16425b; /* Navbar color */
+  background-color: var(--soft-brown); /* Navbar color */
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -121,18 +203,18 @@ body, html {
 
 .navbar ul li {
   margin: 0 20px;
+  
 }
 
 .navbar ul li a {
-  color: white;
+  color: var(--light-cream);
   text-decoration: none;
   font-size: 18px;
   padding: 10px;
-  transition: color 0.3s;
-}
+  }
 
 .navbar ul li a:hover {
-  color: #61dafb;
+  color: var(--dark-brown);
 }
 
 .hero-text-gold {
@@ -142,7 +224,7 @@ body, html {
   
   
   /* Apply the background image */
-  background-image: url('./zloty32.png');
+  background-image: url('./example-hero.png');
   background-size: 200% 100%; /* Make the background wider for animation */
   background-position: 0 0; /* Start at the left */
   background-clip: text;
@@ -162,7 +244,7 @@ body, html {
   z-index: 2;
   
   /* Apply the background image */
-  background-image: url('./srebrny.jpg');
+  background-image: url('./example-hero.png');
   background-size: 200% 100%; /* Make the background wider for animation */
   background-position: 0 0; /* Start at the left */
   background-clip: text;
@@ -181,7 +263,7 @@ body, html {
   z-index: 2;
   
   /* Apply the background image */
-  background-image: url('./czerwony.jpg');
+  background-image: url('./example-hero.png');
   background-size: 200% 100%; /* Make the background wider for animation */
   background-position: 0 0; /* Start at the left */
   background-clip: text;
@@ -208,7 +290,7 @@ body, html {
 
 
 .language-switcher {
-  color:white;
+  color: var(--light-cream);
   position: absolute;
   top: 15px;
   right: 20px;
@@ -227,7 +309,7 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #16425b;
+  background-color: var(--dark-brown);
   position: relative;
   overflow: hidden;
 }
@@ -255,7 +337,7 @@ body, html {
   width: 50%;
   opacity: 1; /* Default fully visible */
   transition: opacity 0.8s ease; /* Smooth fade-out over 1 second */
-  color: #d9dcd6;
+  color: var(--light-cream);
   font-family: 'Metamorphous', static;
 }
 
@@ -273,7 +355,7 @@ body, html {
 /* Fade-in message for "Do zobaczenia wkrótce" */
 .fade-in-message {
   font-size: 2rem;
-  color: #d9dcd6;
+  color: black;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -359,9 +441,9 @@ body, html {
   font-size: 1rem;
   cursor: pointer;
   font-family: 'Metamorphous', static;
-  background-color: #16425b;
+  background-color: var(--dark-brown);
   border: 0;
-  color: #d9dcd6;
+  color: var(--light-cream);
   font-size: 40px;
 }
 
@@ -412,6 +494,7 @@ body, html {
     padding: 0.75rem;
   }
   .App-header::before {
+    min-height:30vh;
     max-height:30vh;
     width:100%;
   }
@@ -439,12 +522,12 @@ body, html {
   gap: 20px;
   padding: 20px;
   text-align: center;
-  background-color: #16425b;
+  background-color: var(--light-tan);
 }
 
 .centered-text-with-images h2 {
   font-size: 8vw;
-  color: #d9dcd6;
+  color: var(--light-cream);
   font-family: 'Metamorphous', sans-serif;
 
 }
@@ -493,11 +576,17 @@ body, html {
   }
 
   .App-header {
-    max-height: 20vh;
+    min-height:60vh;
+    max-height:60vh;
   }
 
-  .intro-section h2 {
+  .intro-section h3 {
     font-size: 24px;
+    
+  }
+
+  .intro-section{
+    min-height: 50vh; /* Full viewport height */
   }
 
   .intro-section p {
@@ -523,7 +612,8 @@ body, html {
   }
 
   .App-header {
-    max-height: 20vh;
+    min-height:40vh;
+    max-height:40vh;
   }
 
   .intro-section h2 {
@@ -549,7 +639,7 @@ body, html {
   top: 50px; /* Adjust this value to position lower */
   left: 0;
   right: 0;
-  background-color: #1c1c1e; /* Change to dark color */
+  background-color: var(--light-tan); /* Change to dark color */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   list-style: none;
   padding: 0;
@@ -571,7 +661,7 @@ body, html {
 
 /* Change dropdown item link color on hover */
 .dropdown li a:hover {
-  background-color: #333; /* Darker color on hover */
+  background-color: var(--reddish-brown); /* Darker color on hover */
 }
 
 /* Dropdown visibility based on mobile view */
@@ -596,6 +686,11 @@ body, html {
   .navbar ul li {
     margin: 0 10px; /* Spacing between menu items */
   }
+
+
+  
+
+
 }
 
 
