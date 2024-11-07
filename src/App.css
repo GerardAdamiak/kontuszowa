@@ -71,6 +71,7 @@ body, html {
 .intro-section {
   flex: 1; /* This allows the intro section to grow and fill the available space */
   padding: 50px 15vw;
+  padding-top: 10px;
   margin-bottom: 40px;
   
   background-image: url('./pergaminDol.png');
@@ -90,6 +91,7 @@ body, html {
   margin-bottom: 20px;
   margin-left: 25vw;
   margin-right: 13vw;
+  margin-top: 0;
   font-size: 2vw;
   line-height: 2;
 }
@@ -580,9 +582,8 @@ padding-bottom: 20px;
     max-height:60vh;
   }
 
-  .intro-section h3 {
-    font-size: 24px;
-    
+  .intro-section h2 {
+    font-size: 12px;
   }
 
   .intro-section{
@@ -617,7 +618,7 @@ padding-bottom: 20px;
   }
 
   .intro-section h2 {
-    font-size: 20px;
+    font-size: 11px;
   }
 
   .intro-section p {
