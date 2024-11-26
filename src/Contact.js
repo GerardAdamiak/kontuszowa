@@ -22,6 +22,7 @@ function Contact({ language }) {
             <h3>{language === 'PL' ? 'Skontaktuj się z Nami' : 'Contact Us'}</h3>
             <p>Email: info@kontuszowa.com</p>
             <p>{language === 'PL' ? 'Telefon: +48 123 456 789' : 'Phone: +48 123 456 789'}</p>
+            <p>Facebook: Kontuszowa</p>
           </section>
   
           

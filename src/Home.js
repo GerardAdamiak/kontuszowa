@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 
 function Home({ language }) {
@@ -6,9 +7,15 @@ function Home({ language }) {
         document.title = language === 'PL' ? 'Strona Główna' : 'Home';
     }, [language]);
 
+    
+
+  
 
   
     return (
+
+        
+
         <div className="App">
             <header id="home" className="App-header">
                 <div className="hero-text-silver"></div>
@@ -74,6 +81,17 @@ function Home({ language }) {
  
 </div></div>
             </section>
+            <section className="feast-section">
+  <div className="feast-content">
+    <h1>{language === 'PL' ? 'Dołącz do biesiady' : 'Join the feast'}</h1>
+    <div className="feast-images">
+      <img src="/claraNix.png" alt="Feast 1" className="feast-image" />
+      <img src="/alterSol.png" alt="Feast 2" className="feast-image" />
+      <img src="/rosIgnis.png" alt="Feast 3" className="feast-image" />
+    </div>
+  </div>
+</section>
+
         </div>
     );
 }

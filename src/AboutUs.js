@@ -1,37 +1,33 @@
-// Home.js
 import React from 'react';
+
 
 function AboutUs({ language }) {
   React.useEffect(() => {
     document.title = language === 'PL' ? 'O Nas' : 'About Us';
   }, [language]);
-  
-    return (
-      <div className="App">
-        
-{/*             
-  
-          <header id="home" className="App-header">
-            <div className="hero-text-gold">
-            
-            </div>
-          </header>
-  
-           */}
-          
-          <section id="about" className="App-section">
-            <h3>{language === 'PL' ? 'O Nas' : 'About Us'}</h3>
-            <p>
-            {language === 'PL' ? 'W Kontuszowej, wierzymy w zachowanie dobrych, bogatych tradycji polskiego wódkotwórstwa. Nasze przepisy i tradycje są przekazywane od pokoleń.' : 'At Kontuszowa, we believe in preserving the rich traditions of Polish vodka making. Our unique recipe has been passed down through generations.'}
-            </p>
-          </section>
-  
-          
-  
-          
-      </div>
-    );
-  }
-  
+
+  const storyPL = `
+    W sercu Podkarpacia powstała idea odrodzenia szlacheckich tradycji tworzenia wybornych trunków. 
+    Kluczowym momentem było nawiązanie współpracy z legendarnym technologiem z Polmosu Łańcut, 
+    który pomógł odtworzyć tradycyjne receptury rosolisów. 
+    Nasze produkty, takie jak "Sarmacka Perła" czy "Rosolis Ziołowy", to hołd dla dawnej Rzeczypospolitej.`;
+
+  const storyEN = `
+    In the heart of Podkarpacie, the idea of reviving noble traditions of crafting exquisite liquors emerged. 
+    A crucial milestone was partnering with a legendary technologist from Polmos Łańcut, 
+    who helped recreate traditional rosolis recipes. 
+    Our products, like "Sarmacka Pearl" and "Herbal Rosolis," are a tribute to the legacy of old Poland.`;
+
+  return (
+    <div className="about-container">
+      <section id="about" className="about-section">
+        <h3 className="about-title">{language === 'PL' ? 'O Nas' : 'About Us'}</h3>
+        <p className="about-description">
+          {language === 'PL' ? storyPL : storyEN}
+        </p>
+      </section>
+    </div>
+  );
+}
 
 export default AboutUs;
