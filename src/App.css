@@ -47,12 +47,12 @@ body, html {
   text-align: center;
   min-height: 100vh; /* Full height for flexbox */
   
-    background-color: var(--dark-brown);
+    background-color: #f8ebe0;
   
 }
 
 .App-header {
-  background-image: url('./hero.png');
+  background-image: url('./hero-image.png');
   background-color: #f8ebe0;
   background-size: contain; /* Keeps the image proportions */
   background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -70,12 +70,12 @@ body, html {
 
 .intro-section {
   flex: 1; /* This allows the intro section to grow and fill the available space */
-  padding: 50px 15vw;
-  padding-top: 10px;
-  margin-bottom: 40px;
   
-  background-image: url('./pergaminDol.png');
-  background-color: var(--dark-brown);
+  padding-top: 30px;
+  margin-bottom: 40px;
+  background-image: url('./intro-section.png');
+
+  background-color: #f8ebe0;
   background-size: contain; /* Keeps the image proportions */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center top; /* Positions the image at the bottom center */
@@ -86,12 +86,13 @@ body, html {
 }
 
 .intro-section h2 {
-  color: var(--light-cream);
+  color: rgb(101, 100, 100);
   
-  margin-bottom: 20px;
-  margin-left: 25vw;
-  margin-right: 13vw;
-  margin-top: 0;
+  padding-top: 2vw;
+  padding-left: 13vw;
+  padding-right: 13vw;
+  text-align: center;
+  margin-top: 25%;
   font-size: 2vw;
   line-height: 2;
 }
@@ -216,7 +217,7 @@ padding-bottom: 20px;
   color: var(--light-cream);
   text-decoration: none;
   font-size: 18px;
-  padding: 10px;
+  padding: 2vw;
   }
 
 .navbar ul li a:hover {
@@ -760,6 +761,51 @@ padding-bottom: 20px;
   border-left: 3px dotted #421900;
 }
 
+.feast-item {
+  position: relative;
+  display: inline-block;
+}
+
+.info-panel {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Start to the right of the image */
+  background-color: rgba(216, 216, 216, 0.8); /* Semi-transparent light gray */
+  color: #000; /* Adjusted for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  white-space: wrap; /* Prevent text wrapping */
+  transform: translateX(-20px); /* Initially offset behind the image */
+  opacity: 0; /* Initially hidden */
+  z-index: 10; /* Make sure this is above other elements */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.feast-item:hover .info-panel {
+  transform: translateX(0); /* Move it to the right */
+  opacity: 1; /* Make it visible */
+}
+
+.feast-image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feast-images {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Space between images */
+  flex-wrap: wrap; /* Ensures responsiveness */
+  padding-bottom: 30px;
+}
+
+.feast-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
 .feast-section {
   background-color: #7b4222; /* Dark brown background */
   color: #fff; /* White text */
@@ -779,22 +825,3 @@ padding-bottom: 20px;
   font-family: 'Metamorphous', serif; /* Optional: Customize the font */
 }
 
-.feast-images {
-  display: flex;
-  justify-content: center;
-  gap: 50px; /* Space between images */
-  flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-.feast-image {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* Optional: Rounded corners */
-  
-  transition: transform 0.3s ease;
-}
-
-.feast-image:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}

@@ -85,12 +85,22 @@ function Home({ language }) {
   <div className="feast-content">
     <h1>{language === 'PL' ? 'Dołącz do biesiady' : 'Join the feast'}</h1>
     <div className="feast-images">
-      <img src="/claraNix.png" alt="Feast 1" className="feast-image" />
-      <img src="/alterSol.png" alt="Feast 2" className="feast-image" />
-      <img src="/rosIgnis.png" alt="Feast 3" className="feast-image" />
+      <div className="feast-item">
+        <img src="/claraNix.png" alt="Feast 1" className="feast-image" />
+        <div className="info-panel">Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu. Jej smak jest czysty, klarowny i mocny, z subtelnym, zbożowym akcentem, który oddaje charakter dawnych trunków tworzonych w czasach wojennych. Proces destylacji nawiązuje do tradycyjnych metod, gwarantując nieskazitelną jakość i niezwykłą głębię smaku.</div>
+      </div>
+      <div className="feast-item">
+        <img src="/alterSol.png" alt="Feast 2" className="feast-image" />
+        <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw. Jej aksamitna tekstura i łagodny charakter czynią ją idealnym wyborem na długie, towarzyskie spotkania. Smak miodu jest zrównoważony, nie dominując, ale delikatnie podkreślając tradycyjny polski kunszt gorzelniczy. Zapach wódki przenosi w świat dawnych polskich biesiad, oferując ciepło i zmysłowe aromaty.</div>
+      </div>
+      <div className="feast-item">
+        <img src="/rosIgnis.png" alt="Feast 3" className="feast-image" />
+        <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych. Jej smak to harmonia naturalnych ziół, leśnych owoców i odrobiny goryczy, która nadaje charakteru. Wyczuwalne są nuty jałowca, kolendry, anyżu oraz delikatny akcent dębiny, które podkreślają jej wytrawny profil. Aromat przypomina zapach lasu o poranku, pełen świeżości i tajemnicy.</div>
+      </div>
     </div>
   </div>
 </section>
+
 
         </div>
     );
