@@ -20,7 +20,7 @@ function Home({ language }) {
             <header id="home" className="App-header">
                 <div className="hero-text-silver"></div>
             </header>
-
+            <div className='space'></div>
             <section className="intro-section">
                 <h2>
                     {language === 'PL'
@@ -38,6 +38,12 @@ function Home({ language }) {
             <section className="timeline-section">
                 <h1>{language === 'PL' ? 'Poznaj Historię' : 'Discover History'}</h1>
             <div class="hOut"><div class="hIn">
+  <div class="event2">
+    </div>
+    <div class="event2">
+    </div>
+    <div class="event2">
+    </div>
   <div class="event">
     <p class="eDate">966</p>
     <p class="eTxt">{language === 'PL' ? 'Chrzest Polski – początek chrześcijańskiej kultury w Polsce, tworzenie fundamentów państwowości.' : 'Baptism of Poland – the beginning of Christian culture in Poland and the foundation of statehood.'}</p>
@@ -78,7 +84,12 @@ function Home({ language }) {
     <p class="eDate">XVIII w.</p>
     <p class="eTxt">{language === 'PL' ? 'Złoty wiek polskiej szlachty – rozwój tradycji biesiad, polowań oraz zestawiania wódek na różne okazje.' : 'Golden age of Polish nobility – the development of traditions such as feasting, hunting, and pairing vodkas for various occasions.'}</p>
   </div>
- 
+  <div class="event2">
+    </div>
+    <div class="event2">
+    </div>
+    <div class="event2">
+    </div>
 </div></div>
             </section>
             <section className="feast-section">
