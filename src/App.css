@@ -69,33 +69,79 @@ body, html {
 
 
 .intro-section {
-  flex: 1; /* This allows the intro section to grow and fill the available space */
-  
-  padding-top: 30px;
-  margin-bottom: 40px;
-  background-image: url('./intro-section.png');
-
-  background-color: #f8ebe0;
-  background-size: contain; /* Keeps the image proportions */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center top; /* Positions the image at the bottom center */
-  min-height: 100vh; /* Full viewport height */
-  color: var(--light-cream);
   text-align: center;
-  
+  padding: 60px 20px;
+  background-color: #f8ebe0; /* Dark brown background */
+  color: #000000;
 }
 
 .intro-section h2 {
-  color: rgb(101, 100, 100);
-  
-  padding-top: 2vw;
-  padding-left: 13vw;
-  padding-right: 13vw;
-  text-align: center;
-  margin-top: 25%;
-  font-size: 2vw;
-  line-height: 2;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.image-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between the two image-text pairs */
+  align-items: center;
+}
+
+.image-text-item-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  padding-left: 100px;
+}
+.image-text-item-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  padding-right: 100px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.text-box {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-box.right {
+  right: -20px; /* Offset to overlap the image */
+  transform: translateX(20%);
+}
+
+.text-box.left {
+  left: -20px; /* Offset to overlap the image */
+  transform: translateX(-20%);
+}
+
+@media screen and (max-width: 768px) {
+  .image-text-container {
+    gap: 20px;
+  }
+
+  
+}
+
 
 .App-section h3{
   color: var(--light-cream);
@@ -713,17 +759,92 @@ padding-bottom: 20px;
   overflow-x: scroll; /* Enable horizontal scrolling */
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge (Legacy) */
+  
 }
 
 .hOut::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
 }
 
+@keyframes scrollLeft {
+
+  0% {
+    transform: translateX(0%);
+  }
+  
+  5% {
+    transform: translateX(-5%);
+  }
+  10% {
+    transform: translateX(-5%);
+  }
+  15% {
+    transform: translateX(-10%);
+  }
+  20% {
+    transform: translateX(-10%);
+  }
+  25% {
+    transform: translateX(-15%);
+  }
+  30% {
+    transform: translateX(-15%);
+  }
+  35% {
+    transform: translateX(-20%);
+  }
+  40% {
+    transform: translateX(-20%);
+  }
+  45% {
+    transform: translateX(-25%);
+  }
+ 
+  50% {
+    transform: translateX(-25%);
+  }
+  
+  55% {
+    transform: translateX(-30%);
+  }
+  60% {
+    transform: translateX(-30%);
+  }
+  65% {
+    transform: translateX(-35%);
+  }
+  70% {
+    transform: translateX(-35%);
+  }
+  75% {
+    transform: translateX(-40%);
+  }
+  80% {
+    transform: translateX(-40%);
+  }
+  85% {
+    transform: translateX(-45%);
+  }
+  90% {
+    transform: translateX(-45%);
+  }
+  95% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
 .hIn {
   display: flex;
-  padding-bottom: 10px; margin-bottom: 20px;
+  animation: scrollLeft 40s linear infinite;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
   border-bottom: 3px dotted #421900;
-  min-width: fit-content; width: 100%;
+  min-width: fit-content;
+  width: 100%;
 }
 
 
@@ -770,49 +891,54 @@ padding-bottom: 20px;
 .feast-item {
   position: relative;
   display: inline-block;
+  overflow: hidden; /* Ensures the panel doesn't overflow the image */
 }
 
 .info-panel {
   position: absolute;
-  top: 0;
-  left: 100%; /* Start to the right of the image */
+  bottom: 0; /* Start at the bottom of the image */
+  left: 0; /* Align with the left edge of the image */
+  width: 100%; /* Cover the full width of the image */
+  height: 0; /* Start with zero height */
   background-color: rgba(216, 216, 216, 0.8); /* Semi-transparent light gray */
   color: #000; /* Adjusted for contrast */
+  overflow: hidden; /* Hide content until it expands */
   padding: 10px;
-  border-radius: 5px;
-  min-width: 300px;
-  white-space: wrap; /* Prevent text wrapping */
-  transform: translateX(-20px); /* Initially offset behind the image */
+  border-radius: 0 0 10px 10px; /* Rounded corners for the bottom */
   opacity: 0; /* Initially hidden */
-  z-index: 10; /* Make sure this is above other elements */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.feast-item:hover .info-panel {
-  transform: translateX(0); /* Move it to the right */
-  opacity: 1; /* Make it visible */
+  z-index: 10; /* Ensure it’s above other elements */
+  transition: height 0.3s ease, opacity 0.3s ease;
 }
 
 .feast-image {
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
-.space{
+.space {
   height: 10vh;
 }
+
+
+
 .feast-images {
   display: flex;
   justify-content: center;
-  gap: 50px; /* Space between images */
+  gap: 3vw; /* Space between images */
   flex-wrap: wrap; /* Ensures responsiveness */
   padding-bottom: 30px;
 }
 
 .feast-image:hover {
   transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.feast-item:hover .info-panel {
+  height: 100%; /* Expand to cover the full height of the image */
+  opacity: 1; /* Make it visible */
 }
 
 .feast-section {
@@ -828,9 +954,12 @@ padding-bottom: 20px;
 }
 
 .feast-section h1 {
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);
   margin-bottom: 60px;
   margin-top: 60px;
   font-family: 'Metamorphous', serif; /* Optional: Customize the font */
+  text-align: center; /* Center-align the text */
 }
+
+
 
