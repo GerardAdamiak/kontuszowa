@@ -921,7 +921,7 @@ padding-bottom: 20px;
 }
 
 .feast-image {
-  max-width: 24vw;
+  max-width: 20vw;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -937,7 +937,7 @@ padding-bottom: 20px;
 .feast-images {
   display: flex;
   justify-content: center;
-  gap: 3vw; /* Space between images */
+  gap: 2vw; /* Space between images */
   flex-wrap: wrap; /* Ensures responsiveness */
   padding-bottom: 30px;
 }
