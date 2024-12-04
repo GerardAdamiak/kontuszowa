@@ -22,13 +22,18 @@ function Home({ language }) {
             </header>
             <div className='space'></div>
             <section className="intro-section">
-  <h2>
+ 
+  <div className="image-text-container">
+    {/* First image with text on the right */}
+    <div className="image-text-item">
+      <img src="intro-section.png" alt="Higher" className="image" />
+      
+    </div>
+    <h2>
     {language === 'PL'
       ? 'Witamy w Kontuszowej, marce wykwintnej, tradycyjnie destylowanej polskiej wódki. Każda butelka to święto autentyczności.'
       : 'Welcome to Kontuszowa, a brand of exquisite, traditionally distilled Polish vodka. Crafted with care and heritage, every bottle is a celebration of authenticity.'}
   </h2>
-  <div className="image-text-container">
-    {/* First image with text on the right */}
     <div className="image-text-item-right">
       <img src="zboze.png" alt="Higher" className="image" />
       <div className="text-box right">
@@ -57,7 +62,7 @@ function Home({ language }) {
             </section>
             {/* Timeline Section */}
             <section className="timeline-section">
-                <h1>{language === 'PL' ? 'Poznaj Historię' : 'Discover History'}</h1>
+                <h1>{language === 'PL' ? 'Poznaj Historię Polski Szlacheckiej' : 'Discover History of Noble Poland'}</h1>
             <div class="hOut"><div class="hIn">
   {/* <div class="event2">
     </div>
