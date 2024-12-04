@@ -918,10 +918,11 @@ padding-bottom: 20px;
   opacity: 0; /* Initially hidden */
   z-index: 10; /* Ensure it’s above other elements */
   transition: height 0.3s ease, opacity 0.3s ease;
+  font-size: 0.85rem;
 }
 
 .feast-image {
-  max-width: 20vw;
+  max-width: 18vw;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -940,6 +941,25 @@ padding-bottom: 20px;
   gap: 2vw; /* Space between images */
   flex-wrap: wrap; /* Ensures responsiveness */
   padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .feast-images {
+    display: flex;
+
+   
+    gap: 2vw; /* Space between images */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    padding-bottom: 30px;
+  }
+
+  .feast-image {
+    max-width: 40vw;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
 }
 
 .feast-image:hover {
