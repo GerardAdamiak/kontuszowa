@@ -763,14 +763,25 @@ padding-bottom: 20px;
 
 .timeline-section h1{
   font-size: 40px;
+  padding-bottom: 30px;
 }
 
-.hOut {
-  overflow-x: scroll; /* Enable horizontal scrolling */
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge (Legacy) */
-  
+/* Scale the active event */
+.hIn .event.active {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  z-index: 1; /* Ensure the scaled element stays on top */
+  top: -30px;
 }
+
+/* Scale down the ::before pseudo-element of the active event */
+.hIn .event.active::before {
+  transform: scale(0.8);
+  transition: transform 0.1s ease; /* Optional smoother effect for pseudo-element */
+}
+
+/* Scale down the ::after pseudo-element of the active event */
+
 
 .hOut::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
@@ -855,6 +866,7 @@ padding-bottom: 20px;
   border-bottom: 3px dotted #421900;
   min-width: fit-content;
   width: 100%;
+  
 }
 
 
@@ -918,11 +930,11 @@ padding-bottom: 20px;
   opacity: 0; /* Initially hidden */
   z-index: 10; /* Ensure it’s above other elements */
   transition: height 0.3s ease, opacity 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 2vw;
 }
 
 .feast-image {
-  max-width: 18vw;
+  max-width: 23vw;
   width: 100%;
   height: auto;
   border-radius: 10px;

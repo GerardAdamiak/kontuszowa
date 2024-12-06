@@ -5,6 +5,48 @@ import './App.css';
 function Home({ language }) {
     React.useEffect(() => {
         document.title = language === 'PL' ? 'Strona Główna' : 'Home';
+
+        const events = document.querySelectorAll(".hIn .event");
+        const hOut = document.querySelector(".hOut");
+    
+        const updateCenterElement = () => {
+          const hOutRect = hOut.getBoundingClientRect();
+          const centerX = hOutRect.width / 2 + hOutRect.left;
+    
+          let closestElement = null;
+          let closestDistance = Infinity;
+    
+          events.forEach(event => {
+            const eventRect = event.getBoundingClientRect();
+            const eventCenterX = eventRect.left + eventRect.width / 2;
+            const distance = Math.abs(centerX - eventCenterX);
+    
+            if (distance < closestDistance) {
+              closestDistance = distance;
+              closestElement = event;
+            }
+          });
+    
+          // Remove 'active' class from all events
+          events.forEach(event => event.classList.remove("active"));
+    
+          // Add 'active' class to the closest element
+          if (closestElement) {
+            closestElement.classList.add("active");
+          }
+    
+          // Continue checking
+          requestAnimationFrame(updateCenterElement);
+        };
+    
+        // Start the loop
+        updateCenterElement();
+    
+        return () => {
+          // Cleanup when the component unmounts
+          events.forEach(event => event.classList.remove("active"));
+        };
+
     }, [language]);
 
     
@@ -34,7 +76,7 @@ function Home({ language }) {
       ? 'Witamy w Kontuszowej, marce wykwintnej, tradycyjnie destylowanej polskiej wódki. Każda butelka to święto autentyczności.'
       : 'Welcome to Kontuszowa, a brand of exquisite, traditionally distilled Polish vodka. Crafted with care and heritage, every bottle is a celebration of authenticity.'}
   </h2>
-    <div className="image-text-item-right">
+    {/* <div className="image-text-item-right">
       <img src="zboze.png" alt="Higher" className="image" />
       <div className="text-box right">
         <p> {language === 'PL'
@@ -43,14 +85,14 @@ function Home({ language }) {
       </div>
     </div>
     {/* Second image with text on the left */}
-    <div className="image-text-item-left">
+    {/* <div className="image-text-item-left">
       <img src="3maj.png" alt="Lower" className="image" />
       <div className="text-box left">
         <p>{language === 'PL'
       ? 'Najważniejszymi wartościami dla nas są historia i tradycja.'
       : 'We value history and tradition the most.'}</p>
       </div>
-    </div>
+    </div>  */}
   </div>
 </section>
 
@@ -165,15 +207,15 @@ function Home({ language }) {
     <div className="feast-images">
       <div className="feast-item">
         <img src="/claraNixPan.png" alt="Feast 1" className="feast-image" />
-        <div className="info-panel">Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu. Jej smak jest czysty, klarowny i mocny, z subtelnym, zbożowym akcentem, który oddaje charakter dawnych trunków tworzonych w czasach wojennych. Proces destylacji nawiązuje do tradycyjnych metod, gwarantując nieskazitelną jakość i niezwykłą głębię smaku.</div>
+        <div className="info-panel">Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu.</div>
       </div>
       <div className="feast-item">
         <img src="/alterSolPotop.png" alt="Feast 2" className="feast-image" />
-        <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw. Jej aksamitna tekstura i łagodny charakter czynią ją idealnym wyborem na długie, towarzyskie spotkania. Smak miodu jest zrównoważony, nie dominując, ale delikatnie podkreślając tradycyjny polski kunszt gorzelniczy. Zapach wódki przenosi w świat dawnych polskich biesiad, oferując ciepło i zmysłowe aromaty.</div>
+        <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw.</div>
       </div>
       <div className="feast-item">
         <img src="/rosIgnisOgien.png" alt="Feast 3" className="feast-image" />
-        <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych. Jej smak to harmonia naturalnych ziół, leśnych owoców i odrobiny goryczy, która nadaje charakteru. Wyczuwalne są nuty jałowca, kolendry, anyżu oraz delikatny akcent dębiny, które podkreślają jej wytrawny profil. Aromat przypomina zapach lasu o poranku, pełen świeżości i tajemnicy.</div>
+        <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych.</div>
       </div>
     </div>
   </div>
