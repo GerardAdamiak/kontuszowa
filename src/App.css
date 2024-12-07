@@ -782,7 +782,6 @@ padding-bottom: 20px;
 
 /* Scale down the ::after pseudo-element of the active event */
 
-
 .hOut::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
 }
@@ -793,31 +792,31 @@ padding-bottom: 20px;
     transform: translateX(0%);
   }
   
-  5% {
+  1.5% {
     transform: translateX(-5%);
   }
   10% {
     transform: translateX(-5%);
   }
-  15% {
+  11.5% {
     transform: translateX(-10%);
   }
   20% {
     transform: translateX(-10%);
   }
-  25% {
+  21.5% {
     transform: translateX(-15%);
   }
   30% {
     transform: translateX(-15%);
   }
-  35% {
+  31.5% {
     transform: translateX(-20%);
   }
   40% {
     transform: translateX(-20%);
   }
-  45% {
+  41.5% {
     transform: translateX(-25%);
   }
  
@@ -825,31 +824,31 @@ padding-bottom: 20px;
     transform: translateX(-25%);
   }
   
-  55% {
+  51.5% {
     transform: translateX(-30%);
   }
   60% {
     transform: translateX(-30%);
   }
-  65% {
+  61.5% {
     transform: translateX(-35%);
   }
   70% {
     transform: translateX(-35%);
   }
-  75% {
+  71.5% {
     transform: translateX(-40%);
   }
   80% {
     transform: translateX(-40%);
   }
-  85% {
+  81.5% {
     transform: translateX(-45%);
   }
   90% {
     transform: translateX(-45%);
   }
-  95% {
+  91.5% {
     transform: translateX(-50%);
   }
   100% {
@@ -860,8 +859,8 @@ padding-bottom: 20px;
 
 .hIn {
   display: flex;
-  animation: scrollLeft 40s linear infinite;
-  padding-bottom: 10px;
+  animation: scrollLeft 60s linear infinite;
+  padding-bottom: 0px;
   margin-bottom: 20px;
   border-bottom: 3px dotted #421900;
   min-width: fit-content;
@@ -875,8 +874,9 @@ padding-bottom: 20px;
 .hIn .event {
   color: #fff; background: #421900;
   min-width: 200px; max-width: 300px;
-  padding: 10px; margin: 10px; border-radius: 10px;
+  padding: 10px; margin: 20px; border-radius: 10px;
   position: relative;
+  right: 120px;
 }
 
 .hIn .event2 {
@@ -1012,6 +1012,5 @@ padding-bottom: 20px;
   position: relative;
   left: 20vw; /* Move the second h1 slightly to the right */
 }
-
 
 
