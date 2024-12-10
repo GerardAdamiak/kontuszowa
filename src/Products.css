@@ -55,7 +55,7 @@
 
   }
   
-  .product h2 {
+  .product h1 {
     margin-bottom: 10px;
     font-size: 28px;
     
@@ -72,7 +72,7 @@
     background-color: var(--soft-brown);
     
   }
-  .product-right h2{
+  .product-right h1{
    
     color: var(--soft-brown);
     

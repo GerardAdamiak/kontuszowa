@@ -27,7 +27,7 @@ function Products({ language }) {
           <div className="product-description">
             <div className='product-link'>
           <Link to="/products/claranix">
-            <h2>{language === 'PL' ? 'Kontuszowa Clara Nix' : 'Kontuszowa Clara Nix'}</h2>
+            <h1>{language === 'PL' ? 'Kontuszowa Clara Nix' : 'Kontuszowa Clara Nix'}</h1>
             </Link>
             </div>
             <p>
@@ -47,7 +47,7 @@ function Products({ language }) {
           <div className="product-description">
           <div className='product-link'>
           <Link to="/products/rosignis">
-            <h2>{language === 'PL' ? 'Kontuszowa Ros Ignis' : 'Kontuszowa Ros Ignis'}</h2>
+            <h1>{language === 'PL' ? 'Kontuszowa Ros Ignis' : 'Kontuszowa Ros Ignis'}</h1>
             </Link>
             </div>
             <p>
@@ -66,7 +66,7 @@ function Products({ language }) {
           <div className="product-description">
           <div className='product-link'>
           <Link to="/products/altersol">
-            <h2>{language === 'PL' ? 'Kontuszowa Alter Sol' : 'Kontuszowa Alter Sol'}</h2>
+            <h1>{language === 'PL' ? 'Kontuszowa Alter Sol' : 'Kontuszowa Alter Sol'}</h1>
             </Link>
             </div>
             <p>

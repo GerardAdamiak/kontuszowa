@@ -16,7 +16,7 @@ function ClassicProduct({ language }) {
           <h1>{language === 'PL' ? 'Kontuszowa Clara Nix' : 'Kontuszowa Clara Nix'}</h1>
           <p>
             {language === 'PL'
-              ? 'Kontuszowa Clara Nix to nasz flagowy produkt, który łączy tradycję z nowoczesnością. Wykonany z najwyższej jakości składników, oferuje delikatny smak, który sprawia, że każda kropla to czysta przyjemność.'
+              ? 'Wódka biała czysta, produkowana z orkisza – pradawnej odmiany pszenicy. Związana z militarną historią Rzeczpospolitej, symbolizuje męstwo i honor. Biała wódka jest również synonimem elegancji i szlacheckiego prestiżu.'
               : 'Kontuszowa Clara Nix is our flagship product, combining tradition with modernity. Crafted from the finest ingredients, it offers a smooth taste, making every drop a pure delight.'}
           </p>
           <a

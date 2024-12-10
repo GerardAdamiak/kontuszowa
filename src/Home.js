@@ -1,57 +1,77 @@
-import React from 'react';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import AnimatedText from "./AnimatedText"; 
 
 function Home({ language }) {
-    React.useEffect(() => {
-        document.title = language === 'PL' ? 'Strona Główna' : 'Home';
+  React.useEffect(() => {
+    document.title = language === "PL" ? "Strona Główna" : "Home";
 
-        const events = document.querySelectorAll(".hIn .event");
-        const hOut = document.querySelector(".hOut");
-    
-        const updateCenterElement = () => {
-          const hOutRect = hOut.getBoundingClientRect();
-          const centerX = hOutRect.width / 2 + hOutRect.left;
-    
-          let closestElement = null;
-          let closestDistance = Infinity;
-    
-          events.forEach(event => {
-            const eventRect = event.getBoundingClientRect();
-            const eventCenterX = eventRect.left + eventRect.width / 2;
-            const distance = Math.abs(centerX - eventCenterX);
-    
-            if (distance < closestDistance) {
-              closestDistance = distance;
-              closestElement = event;
-            }
-          });
-    
-          // Remove 'active' class from all events
-          events.forEach(event => event.classList.remove("active"));
-    
-          // Add 'active' class to the closest element
-          if (closestElement) {
-            closestElement.classList.add("active");
-          }
-    
-          // Continue checking
-          requestAnimationFrame(updateCenterElement);
-        };
-    
-        // Start the loop
-        updateCenterElement();
-    
-        return () => {
-          // Cleanup when the component unmounts
-          events.forEach(event => event.classList.remove("active"));
-        };
+    const events = document.querySelectorAll(".hIn .event");
+    const hOut = document.querySelector(".hOut");
 
-    }, [language]);
+    const updateCenterElement = () => {
+      const hOutRect = hOut.getBoundingClientRect();
+      const centerX = hOutRect.width / 2 + hOutRect.left;
+
+      let closestElement = null;
+      let closestDistance = Infinity;
+
+      events.forEach((event) => {
+        const eventRect = event.getBoundingClientRect();
+        const eventCenterX = eventRect.left + eventRect.width / 2;
+        const distance = Math.abs(centerX - eventCenterX);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestElement = event;
+        }
+      });
+
+      // Remove 'active' class from all events
+      events.forEach((event) => event.classList.remove("active"));
+
+      // Add 'active' class to the closest element
+      if (closestElement) {
+        closestElement.classList.add("active");
+      }
+
+      // Continue checking
+      requestAnimationFrame(updateCenterElement);
+    };
+
+    // Start the loop
+    updateCenterElement();
+
+    // Cleanup when the component unmounts
+    return () => {
+      events.forEach((event) => event.classList.remove("active"));
+    };
+  }, [language]);
+
+  React.useEffect(() => {
+    const elements = document.querySelectorAll(".image, h2");
+    const observerOptions = {
+      threshold: 0.1, // Trigger when 10% of the element is visible
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    elements.forEach((el) => observer.observe(el));
 
     
 
-  
+    return () => observer.disconnect();
+  }, []);
+
 
   
     return (
@@ -64,36 +84,46 @@ function Home({ language }) {
             </header>
             <div className='space'></div>
             <section className="intro-section">
- 
+            <AnimatedText />
   <div className="image-text-container">
     {/* First image with text on the right */}
     <div className="image-text-item">
-      <img src="intro-section.png" alt="Higher" className="image" />
+      <img src="logoKontuszowa.png" alt="Higher" className="image" />
       
     </div>
     <h2>
     {language === 'PL'
-      ? 'Witamy w Kontuszowej, marce wykwintnej, tradycyjnie destylowanej polskiej wódki. Każda butelka to święto autentyczności.'
+      ? 'Marka Kontuszowa to hołd dla polskiego dziedzictwa, tradycji i historii. Inspirowana tradycjami Rzeczpospolitej Szlacheckiej wódka premium, oddaje ducha polskiej szlachty, jej gościnność, wolność oraz militarną chwałę. Każda butelka to podróż przez historię, pełną niezwykłych wartości, które przez wieki kształtowały narodową tożsamość Polski.'
       : 'Welcome to Kontuszowa, a brand of exquisite, traditionally distilled Polish vodka. Crafted with care and heritage, every bottle is a celebration of authenticity.'}
   </h2>
-    {/* <div className="image-text-item-right">
-      <img src="zboze.png" alt="Higher" className="image" />
-      <div className="text-box right">
-        <p> {language === 'PL'
-      ? 'Nasze wódki są zrobione z produktów najwyższej jakości.'
-      : 'Our vodkas are made out of first-class products.'}</p>
+   
+  </div>
+
+  <section className="feast-section">
+  <div className="feast-content">
+    <h1>{language === 'PL' ? 'Nasze produkty' : 'Our products'}</h1>
+ 
+    <div className="feast-images">
+      <div className="feast-item">
+        <img src="/claraNixBig.png" alt="Feast 1" className="feast-image" />
+        <div className="info-panel"> Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu.</div>
+        <div className="bottle-name">Clara Nix</div>
+      </div>
+      <div className="feast-item">
+        <img src="/alterSolBig.png" alt="Feast 2" className="feast-image" />
+        <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw.</div>
+        <div className="bottle-name">Alter Sol</div>
+      </div>
+      <div className="feast-item">
+        <img src="/rosIgnisBig.png" alt="Feast 3" className="feast-image" />
+        <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych.</div>
+        <div className="bottle-name">Ros Ignis</div>
       </div>
     </div>
-    {/* Second image with text on the left */}
-    {/* <div className="image-text-item-left">
-      <img src="3maj.png" alt="Lower" className="image" />
-      <div className="text-box left">
-        <p>{language === 'PL'
-      ? 'Najważniejszymi wartościami dla nas są historia i tradycja.'
-      : 'We value history and tradition the most.'}</p>
-      </div>
-    </div>  */}
   </div>
+</section>
+
+
 </section>
 
 
@@ -200,27 +230,7 @@ function Home({ language }) {
     </div> */}
 </div></div>
             </section>
-            <section className="feast-section">
-  <div className="feast-content">
-    <h1>{language === 'PL' ? 'Trzy butelki' : 'Three bottles'}</h1>
-    <h1>{language === 'PL' ? 'Trzy dzieła' : 'Three works'}</h1>
-    <div className="feast-images">
-      <div className="feast-item">
-        <img src="/claraNixPan.png" alt="Feast 1" className="feast-image" />
-        <div className="info-panel">Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu.</div>
-      </div>
-      <div className="feast-item">
-        <img src="/alterSolPotop.png" alt="Feast 2" className="feast-image" />
-        <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw.</div>
-      </div>
-      <div className="feast-item">
-        <img src="/rosIgnisOgien.png" alt="Feast 3" className="feast-image" />
-        <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
+          
 
         </div>
     );

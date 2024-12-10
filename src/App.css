@@ -72,13 +72,12 @@ body, html {
   text-align: center;
   padding: 60px 20px;
   background-color: #f8ebe0; /* Dark brown background */
-  color: #000000;
+  color: var(--light-cream);
 }
 
 .intro-section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  margin-top: -20vw;
+  font-size: 1.5rem;
+  margin-top: -20px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -119,10 +118,23 @@ body, html {
   padding-right: 100px;
 }
 
-.image {
-  width: 100%;
-  border-radius: 10px;
+.image,
+h2 {
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Move down */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
 }
+
+.image{
+  width: 30%;
+}
+
+.image.fade-in,
+h2.fade-in {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Original position */
+}
+
 
 .text-box {
   position: absolute;
@@ -155,19 +167,19 @@ body, html {
 
 .App-section h3{
   color: var(--light-cream);
-  background-color: var(--dark-brown);
+  background-color: #f8ebe0;
   margin-bottom: 20px;
   font-size: 2vw;
 }
 
 .App-section {
-  background-color: var(--light-cream);
+  background-color: #f8ebe0;
   margin-bottom: 20px;
   font-size: 2vw;
 }
 
 #about, #contact {
-  background-color: var(--dark-brown);
+  background-color: #f8ebe0;
 
 }
 
@@ -226,13 +238,13 @@ padding-bottom: 20px;
 .App-section {
   flex: 1; /* This allows the section to grow and fill the available space */
   padding: 50px 20px;
-  background-color: var(--warm-brown);
+  background-color: #f8ebe0;
   color: var(--light-cream);
 }
 
 /* Footer styles */
 .App-footer {
-  background-color: var(--light-cream);
+  background-color: #4b2201;
   color: var(--dark-brown);
   padding: 10px;
   text-align: center;
@@ -248,7 +260,7 @@ padding-bottom: 20px;
 
 /* Navbar styles */
 .navbar {
-  background-color: var(--soft-brown); /* Navbar color */
+  background-color: #de9a67; /* Navbar color */
   padding: 15px 0;
   position: fixed;
   top: 0;
@@ -372,7 +384,7 @@ padding-bottom: 20px;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--dark-brown);
+  background-color: #f8ebe0;
   position: relative;
   overflow: hidden;
 }
@@ -504,7 +516,7 @@ padding-bottom: 20px;
   font-size: 1rem;
   cursor: pointer;
   font-family: 'Metamorphous', static;
-  background-color: var(--dark-brown);
+  background-color: #f8ebe0;
   border: 0;
   color: var(--light-cream);
   font-size: 40px;
@@ -585,7 +597,7 @@ padding-bottom: 20px;
   gap: 20px;
   padding: 20px;
   text-align: center;
-  background-color: var(--light-tan);
+  background-color: #f8ebe0;
 }
 
 .centered-text-with-images h2 {
@@ -756,7 +768,7 @@ padding-bottom: 20px;
 }
 
 .timeline-section{
-  background-color: #b17f60;
+  background-color: #f8ebe0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -859,7 +871,7 @@ padding-bottom: 20px;
 
 .hIn {
   display: flex;
-  animation: scrollLeft 60s linear infinite;
+  animation: scrollLeft 40s linear infinite;
   padding-bottom: 0px;
   margin-bottom: 20px;
   border-bottom: 3px dotted #421900;
@@ -876,7 +888,7 @@ padding-bottom: 20px;
   min-width: 200px; max-width: 300px;
   padding: 10px; margin: 20px; border-radius: 10px;
   position: relative;
-  right: 120px;
+  right: 18vw;
 }
 
 .hIn .event2 {
@@ -926,11 +938,12 @@ padding-bottom: 20px;
   color: #000; /* Adjusted for contrast */
   overflow: hidden; /* Hide content until it expands */
   padding: 10px;
-  border-radius: 0 0 10px 10px; /* Rounded corners for the bottom */
+  border-radius: 10px;
   opacity: 0; /* Initially hidden */
   z-index: 10; /* Ensure it’s above other elements */
   transition: height 0.3s ease, opacity 0.3s ease;
-  font-size: 2vw;
+  font-size: 150%;
+  
 }
 
 .feast-image {
@@ -950,9 +963,14 @@ padding-bottom: 20px;
 .feast-images {
   display: flex;
   justify-content: center;
-  gap: 2vw; /* Space between images */
+  gap: 1.6vw; /* Space between images */
   flex-wrap: wrap; /* Ensures responsiveness */
   padding-bottom: 30px;
+}
+
+.bottle-name{
+  font-size: 30px;
+  margin-top: 10px;
 }
 @media (max-width: 768px) {
   .feast-images {
@@ -984,8 +1002,8 @@ padding-bottom: 20px;
 }
 
 .feast-section {
-  background-color: #7b4222; /* Dark brown background */
-  color: #fff; /* White text */
+  background-color: #f8ebe0; /* Dark brown background */
+  color: var(--light-cream); /* White text */
   padding: 60px 20px;
   text-align: center;
 }
@@ -996,21 +1014,48 @@ padding-bottom: 20px;
 }
 
 .feast-section h1 {
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 30px;
   margin-top: 30px;
   font-family: 'Metamorphous', serif; /* Optional: Customize the font */
   text-align: center; /* Center-align the text */
 }
 
-.feast-content h1:first-of-type {
-  position: relative;
-  left: -20vw; /* Move the first h1 slightly to the left */
+
+.animated-text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
 }
 
-.feast-content h1:last-of-type {
-  position: relative;
-  left: 20vw; /* Move the second h1 slightly to the right */
+.animated-text {
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: growAndFade 4s forwards;
 }
+
+@keyframes growAndFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+    transform: translateX(-100vw); /* move off screen left */
+  }
+}
+
+
 
 
