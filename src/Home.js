@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import AnimatedText from "./AnimatedText"; 
 
 function Home({ language }) {
   React.useEffect(() => {
@@ -73,6 +72,36 @@ function Home({ language }) {
   }, []);
 
 
+
+  
+
+
+  const [texts, setTexts] = useState([]);
+
+  useEffect(() => {
+
+    const words = ["demokracja", "nihil novi", "tolerancja", "religia", "husaria", "szlachta", "wiara", "unia", "dobrowolność", "siła", "potęga"];
+
+    const intervalId = setInterval(() => {
+      const randomWord = words[Math.floor(Math.random() * words.length)];
+      
+      const randomHeight = Math.random() * 80 + 10; // Random position from 10% to 90% height
+      
+      const randomDelay = 0; // Random delay for appearance
+
+      setTexts((prevTexts) => [
+        ...prevTexts,
+        {
+          word: randomWord,
+          top: `${randomHeight}%`,
+          delay: randomDelay,
+        },
+      ]);
+    }, 4000); // New word every 3 seconds
+
+    return () => clearInterval(intervalId); // Cleanup on component unmount
+  }, []);
+
   
     return (
 
@@ -84,7 +113,21 @@ function Home({ language }) {
             </header>
             <div className='space'></div>
             <section className="intro-section">
-            <AnimatedText />
+            <div className="animated-text-container">
+      {texts.map((text, index) => (
+        <div
+        key={index}
+        className="animated-text"
+        style={{
+          top: -60, // Random vertical position
+          left: `${Math.random() * 90}%`, // Random horizontal position
+          animation: `growAndFade 4s ease forwards ${text.delay}ms`,
+        }}
+      >
+        {text.word}
+      </div>
+      ))}
+    </div>
   <div className="image-text-container">
     {/* First image with text on the right */}
     <div className="image-text-item">
@@ -106,17 +149,17 @@ function Home({ language }) {
     <div className="feast-images">
       <div className="feast-item">
         <img src="/claraNixBig.png" alt="Feast 1" className="feast-image" />
-        <div className="info-panel"> Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu.</div>
+        {/* <div className="info-panel"> Clara Nix to wyjątkowa wódka biała, destylowana na bazie najwyższej jakości orkiszowego spirytusu.</div> */}
         <div className="bottle-name">Clara Nix</div>
       </div>
       <div className="feast-item">
         <img src="/alterSolBig.png" alt="Feast 2" className="feast-image" />
-        <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw.</div>
+        {/* <div className="info-panel">Alter Sol to wykwintna wódka o delikatnym, miodowym smaku, który doskonale łączy naturalną słodycz z subtelną nutą korzennych przypraw.</div> */}
         <div className="bottle-name">Alter Sol</div>
       </div>
       <div className="feast-item">
         <img src="/rosIgnisBig.png" alt="Feast 3" className="feast-image" />
-        <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych.</div>
+        {/* <div className="info-panel">Ros Ignis to wódka o głębokim, wielowymiarowym smaku, inspirowana bogatą tradycją polskich nalewek ziołowych.</div> */}
         <div className="bottle-name">Ros Ignis</div>
       </div>
     </div>
