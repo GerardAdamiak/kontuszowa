@@ -24,6 +24,9 @@ function Contact({ language }) {
             <p>{language === 'PL' ? 'Telefon: +48 123 456 789' : 'Phone: +48 123 456 789'}</p>
             <p>Facebook: Kontuszowa</p>
           </section>
+
+          <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-9945ace6-6534-43bf-aefe-5537c365f11e" data-elfsight-app-lazy></div>
   
           
       </div>

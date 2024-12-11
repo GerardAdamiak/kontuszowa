@@ -76,7 +76,7 @@ body, html {
 }
 
 .intro-section h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-top: -20px;
   max-width: 800px;
   margin-left: auto;
@@ -123,6 +123,7 @@ h2 {
   opacity: 0; /* Initially invisible */
   transform: translateY(50px); /* Move down */
   transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+  font-size: 1rem;
 }
 
 .image{
@@ -169,13 +170,13 @@ h2.fade-in {
   color: var(--light-cream);
   background-color: #f8ebe0;
   margin-bottom: 20px;
-  font-size: 2vw;
+  font-size: 1rem;
 }
 
 .App-section {
   background-color: #f8ebe0;
   margin-bottom: 20px;
-  font-size: 2vw;
+  font-size: 1rem;
 }
 
 #about, #contact {
@@ -187,11 +188,11 @@ h2.fade-in {
   padding-left: 15%;
   padding-right: 15%;
   line-height: 45px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 #about h3{
-  font-size: 20px;
+  font-size: 1.5rem;
   padding-top: 10%;
 }
 
@@ -200,23 +201,22 @@ h2.fade-in {
   padding-right: 20%;
   line-height: 40px;
 
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 #products p{
 
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 
 #contact p{
   
-
-  font-size: medium;
+  font-size: 1rem;
 }
 
 #contact h3{
-  
+  font-size: 2rem;
 padding-bottom: 20px;
 }
 
@@ -224,7 +224,7 @@ padding-bottom: 20px;
 .App-section p{
   color: var(--light-cream);
   margin-bottom: 20px;
-  font-size: 2vw;
+  font-size: 1rem;
 }
 
 .intro-section p {
@@ -284,7 +284,7 @@ padding-bottom: 20px;
 .navbar ul li a {
   color: var(--light-cream);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2rem;
   padding: 2vw;
   }
 
@@ -292,75 +292,6 @@ padding-bottom: 20px;
   color: var(--dark-brown);
 }
 
-.hero-text-gold {
-  font-size: 48px;
-  font-weight: bold;
-  z-index: 2;
-  
-  
-  /* Apply the background image */
-  background-image: url('./example-hero.png');
-  background-size: 200% 100%; /* Make the background wider for animation */
-  background-position: 0 0; /* Start at the left */
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  
-  /* Add the animation */
-  animation: moveBackground 5s linear infinite;
-  position: relative;  /* Allow for adjustment with 'top' */
-  
-}
-
-.hero-text-silver {
-  font-size: 48px;
-  font-weight: bold;
-  z-index: 2;
-  
-  /* Apply the background image */
-  background-image: url('./example-hero.png');
-  background-size: 200% 100%; /* Make the background wider for animation */
-  background-position: 0 0; /* Start at the left */
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  
-  /* Add the animation */
-  animation: moveBackground 5s linear infinite;
-  position: relative;  /* Allow for adjustment with 'top' */
-
-}
-.hero-text-red {
-  font-size: 48px;
-  font-weight: bold;
-  z-index: 2;
-  
-  /* Apply the background image */
-  background-image: url('./example-hero.png');
-  background-size: 200% 100%; /* Make the background wider for animation */
-  background-position: 0 0; /* Start at the left */
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  
-  /* Add the animation */
-  animation: moveBackground 5s linear infinite;
-  position: relative;  /* Allow for adjustment with 'top' */
-
-}
-
-/* Keyframes for moving the background from left to right */
-@keyframes moveBackground {
-  0% {
-    background-position: 200% 0; /* Start from the left */
-  }
-  100% {
-    background-position: 0 0; /* Move to the right */
-  }
-}
 
 
 
@@ -513,13 +444,13 @@ padding-bottom: 20px;
 
 .buttons button {
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 2rem;
   cursor: pointer;
   font-family: 'Metamorphous', static;
   background-color: #f8ebe0;
   border: 0;
   color: var(--light-cream);
-  font-size: 40px;
+  
 }
 
 /* Media Query for Mobile Screens */
@@ -530,15 +461,7 @@ padding-bottom: 20px;
     padding: 2rem;
     font-family: 'Metamorphous', static;
   }
-  .hero-text-gold{
-    font-size: 6vw;
-  }
-  .hero-text-red{
-    font-size: 6vw;
-  }
-  .hero-text-silver{
-    font-size: 6vw;
-  }
+  
   .whiskey-image {
     width: 50%;
     height: auto; /* Maintain aspect ratio */
@@ -634,7 +557,7 @@ padding-bottom: 20px;
   }
   .language-switcher{
     margin-top: 1%;
-    font-size: 1.3em;
+    font-size: 1.3rem;
   }
   .navbar ul {
     flex-direction: column;
@@ -646,9 +569,7 @@ padding-bottom: 20px;
     margin: 10px 0;
   }
 
-  .hero-text {
-    font-size: 36px;
-  }
+  
 
   .App-header {
     min-height:45vh;
@@ -773,8 +694,8 @@ padding-bottom: 20px;
   padding-bottom: 20px;
 }
 
-.timeline-section h1{
-  font-size: 40px;
+.timeline-section h2{
+  font-size: 2.2rem;
   padding-bottom: 30px;
 }
 
@@ -900,8 +821,8 @@ padding-bottom: 20px;
 }
 
 
-.hIn .eDate { font-weight: 700; font-size: 18px; }
-.hIn .eTxt { font-size: 14px; }
+.hIn .eDate { font-weight: 700; font-size: 1rem; }
+.hIn .eTxt { font-size: 0.9rem; }
 
 /* (PART C) TIMELINE SHARED */
 .hIn .event::before, .hIn .event::after {
@@ -942,7 +863,7 @@ padding-bottom: 20px;
   opacity: 0; /* Initially hidden */
   z-index: 10; /* Ensure it’s above other elements */
   transition: height 0.3s ease, opacity 0.3s ease;
-  font-size: 150%;
+  font-size: 1rem;
   
 }
 
@@ -969,7 +890,7 @@ padding-bottom: 20px;
 }
 
 .bottle-name{
-  font-size: 30px;
+  font-size: 2rem;
   margin-top: 10px;
 }
 @media (max-width: 768px) {
@@ -989,7 +910,21 @@ padding-bottom: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease;
   }
+ .App-section h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'Metamorphous', serif; /* Optional: Customize the font */
+    text-align: center; /* Center-align the text */
+  }
 
+
+  #product-intro {
+   /* Adjust the font size as needed */
+    line-height: 1.6;  /* Optional: Adjust line spacing for better readability */
+    color: #333;       /* Optional: Change the text color */
+  }
+  
 }
 
 .feast-image:hover {
@@ -1014,12 +949,13 @@ padding-bottom: 20px;
 }
 
 .feast-section h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: 2.5rem;
   margin-bottom: 30px;
   margin-top: 30px;
   font-family: 'Metamorphous', serif; /* Optional: Customize the font */
   text-align: center; /* Center-align the text */
 }
+
 
 
 .animated-text-container {
@@ -1035,7 +971,7 @@ padding-bottom: 20px;
 .animated-text {
   position: absolute;
  opacity: 0;
-  font-size: 10px;
+ font-size: 0.7rem;
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
@@ -1059,5 +995,29 @@ padding-bottom: 20px;
 }
 
 
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f8ebe0; /* Light background for better contrast */
+}
+
+.section-title {
+  font-size: 2.5rem; /* Larger font size for the title */
+  margin-bottom: 10px; /* Space between title and body text */
+  font-weight: bold;
+  color: #333; /* Dark color for contrast */
+}
+
+.section-body {
+  font-size: 1rem; /* Smaller font size for the body text */
+  color: #555; /* Slightly lighter color for the body text */
+  line-height: 1.6; /* Improve readability */
+  max-width: 600px; /* Restrict width for better readability */
+}
 
 

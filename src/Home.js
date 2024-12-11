@@ -97,7 +97,7 @@ function Home({ language }) {
           delay: randomDelay,
         },
       ]);
-    }, 4000); // New word every 3 seconds
+    }, 2000); // New word every 3 seconds
 
     return () => clearInterval(intervalId); // Cleanup on component unmount
   }, []);
@@ -113,25 +113,11 @@ function Home({ language }) {
             </header>
             <div className='space'></div>
             <section className="intro-section">
-            <div className="animated-text-container">
-      {texts.map((text, index) => (
-        <div
-        key={index}
-        className="animated-text"
-        style={{
-          top: -60, // Random vertical position
-          left: `${Math.random() * 90}%`, // Random horizontal position
-          animation: `growAndFade 4s ease forwards ${text.delay}ms`,
-        }}
-      >
-        {text.word}
-      </div>
-      ))}
-    </div>
+            
   <div className="image-text-container">
     {/* First image with text on the right */}
     <div className="image-text-item">
-      <img src="logoKontuszowa.png" alt="Higher" className="image" />
+      <img src="LogoKontuszowa.png" alt="Higher" className="image" />
       
     </div>
     <h2>
@@ -175,9 +161,39 @@ function Home({ language }) {
                 <h2>{language === 'PL' ? 'OBUDŹ W SOBIE SZLACHTĘ' : 'FIND YOUR NOBLE SELF'}</h2>
                 <img src="szlachta2.png" alt="Szlachta 2" className="szlachta-image" />
             </section>
+
+            <section className="centered-section">
+      {/* Section Title */}
+      <h2 className="section-title">Historia inspirowana wartościami</h2>
+
+      {/* Section Body */}
+      <p className="section-body">
+      Przez trzy wieki (XVI – XVII – XVIII) w Centralnej Europie istniało niezwykle rozległe i potężne
+państwo, o wyjątkowych i oryginalnych rozwiązaniach na polach społecznych i politycznych,
+w którym dominującą rolę odgrywała szlachta:
+      </p>
+
+      <div className="animated-text-container">
+            {texts.map((text, index) => (
+             <div
+        key={index}
+        className="animated-text"
+        style={{
+          top: 0, // Random vertical position
+          left: `${Math.random() * 30 + 30}%`, // Random horizontal position
+          animation: `growAndFade 1.5s ease forwards ${text.delay}ms`,
+        }}
+      >
+        {text.word}
+      </div>
+      ))}
+    </div>
+    </section>
+
+
             {/* Timeline Section */}
             <section className="timeline-section">
-                <h1>{language === 'PL' ? 'Poznaj Historię Polski Szlacheckiej' : 'Discover History of Noble Poland'}</h1>
+                <h2>{language === 'PL' ? 'Poznaj Historię Polski Szlacheckiej' : 'Discover History of Noble Poland'}</h2>
             <div class="hOut"><div class="hIn">
   {/* <div class="event2">
     </div>
