@@ -127,13 +127,20 @@ h2 {
 }
 
 .image{
-  width: 30%;
+  width: 25rem;
 }
 
 .image.fade-in,
 h2.fade-in {
   opacity: 1; /* Fully visible */
   transform: translateY(0); /* Original position */
+}
+
+.image.fade-out,
+h2.fade-out {
+  opacity: 0; /* Fully transparent */
+  transform: translateY(50px); /* Move down */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
 }
 
 
@@ -714,7 +721,7 @@ padding-bottom: 20px;
 }
 
 .event .event-img {
-  display: none; /* Hidden by default */
+  display: block; /* Hidden by default */
   width: 180px; /* Adjust size */
   height: auto;
   margin-top: 10px;

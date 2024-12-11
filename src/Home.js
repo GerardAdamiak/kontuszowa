@@ -49,27 +49,30 @@ function Home({ language }) {
 
   React.useEffect(() => {
     const elements = document.querySelectorAll(".image, h2");
+  
     const observerOptions = {
       threshold: 0.1, // Trigger when 10% of the element is visible
     };
-
-    const handleIntersection = (entries, observer) => {
+  
+    const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("fade-in");
-          observer.unobserve(entry.target);
+          entry.target.classList.remove("fade-out");
+        } else {
+          entry.target.classList.remove("fade-in");
+          entry.target.classList.add("fade-out");
         }
       });
     };
-
+  
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
+  
     elements.forEach((el) => observer.observe(el));
-
-    
-
+  
     return () => observer.disconnect();
   }, []);
+  
 
 
 
@@ -80,7 +83,7 @@ function Home({ language }) {
 
   useEffect(() => {
 
-    const words = ["demokracja", "nihil novi", "tolerancja", "religia", "husaria", "szlachta", "wiara", "unia", "dobrowolność", "siła", "potęga"];
+    const words = ["demokracja", "nihil novi", "tolerancja", "religia", "husaria", "szlachta", "wiara", "unia", "dobrowolność", "siła", "potęga", "jedność"];
 
     const intervalId = setInterval(() => {
       const randomWord = words[Math.floor(Math.random() * words.length)];
@@ -276,10 +279,26 @@ w którym dominującą rolę odgrywała szlachta:
   </p>
   
 </div>
-  <div class="event">
-    <p class="eDate">XV w.</p>
-    <p class="eTxt">{language === 'PL' ? 'Pierwsze wzmianki o produkcji mocnych alkoholi – destylacja alkoholu w celach medycznych i kulinarnych. Powstanie pierwszych gorzelni przy klasztorach.' : 'First mentions of strong alcohol production – distillation of alcohol for medical and culinary purposes. The establishment of the first distilleries in monasteries.'}</p>
-  </div>
+<div className="event">
+  <img
+    className="event-img"
+    src="/kluszyn.jpg"
+    alt="Event Illustration"
+  />
+  <p className="eDate">XV w.</p>
+  <p className="eTxt">
+  {language === 'PL'
+      ? 'Pierwsze wzmianki o produkcji mocnych alkoholi'
+      : 'First mentions of strong alcohol production'}
+      <br />
+    <span className="eTxt-long">
+      {language === 'PL'
+        ? 'Destylacja alkoholu w celach medycznych i kulinarnych. Powstanie pierwszych gorzelni przy klasztorach.'
+        : 'Distillation of alcohol for medical and culinary purposes. The establishment of the first distilleries in monasteries.'}
+    </span>
+  </p>
+  
+</div>
   <div class="event">
     <p class="eDate">1531</p>
     <p class="eTxt">{language === 'PL' ? 'Bitwa pod Obertynem - zwycięska bitwa polskich wojsk, powstrzymująca wojska mołdawskie.' : 'Battle of Obertyn – a victorious battle by Polish forces, halting the Moldavian army.'}</p>
