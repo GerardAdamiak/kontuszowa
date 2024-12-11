@@ -201,10 +201,25 @@ w którym dominującą rolę odgrywała szlachta:
     </div>
     <div class="event2">
     </div> */}
-  <div class="event">
-    <p class="eDate">966</p>
-    <p class="eTxt">{language === 'PL' ? 'Chrzest Polski – początek chrześcijańskiej kultury w Polsce, tworzenie fundamentów państwowości.' : 'Baptism of Poland – the beginning of Christian culture in Poland and the foundation of statehood.'}</p>
-  </div>
+ <div className="event">
+  <p className="eDate">966</p>
+  <p className="eTxt">
+    {language === 'PL'
+      ? 'Chrzest Polski'
+      : 'Baptism of Poland'}
+    <span className="eTxt-long">
+      {language === 'PL'
+        ? 'Początek chrześcijańskiej kultury w Polsce, tworzenie fundamentów państwowości.'
+        : 'The beginning of Christian culture in Poland, the foundation of statehood.'}
+    </span>
+  </p>
+  <img
+    className="event-img"
+    src="/chrzest.jpg"
+    alt="Event Illustration"
+  />
+</div>
+
   <div class="event">
     <p class="eDate">XV w.</p>
     <p class="eTxt">{language === 'PL' ? 'Pierwsze wzmianki o produkcji mocnych alkoholi – destylacja alkoholu w celach medycznych i kulinarnych. Powstanie pierwszych gorzelni przy klasztorach.' : 'First mentions of strong alcohol production – distillation of alcohol for medical and culinary purposes. The establishment of the first distilleries in monasteries.'}</p>
@@ -241,10 +256,26 @@ w którym dominującą rolę odgrywała szlachta:
     <p class="eDate">XVIII w.</p>
     <p class="eTxt">{language === 'PL' ? 'Złoty wiek polskiej szlachty – rozwój tradycji biesiad, polowań oraz zestawiania wódek na różne okazje.' : 'Golden age of Polish nobility – the development of traditions such as feasting, hunting, and pairing vodkas for various occasions.'}</p>
   </div>
-  <div class="event">
-    <p class="eDate">966</p>
-    <p class="eTxt">{language === 'PL' ? 'Chrzest Polski – początek chrześcijańskiej kultury w Polsce, tworzenie fundamentów państwowości.' : 'Baptism of Poland – the beginning of Christian culture in Poland and the foundation of statehood.'}</p>
-  </div>
+  <div className="event">
+  <img
+    className="event-img"
+    src="/chrzest.jpg"
+    alt="Event Illustration"
+  />
+  <p className="eDate">966</p>
+  <p className="eTxt">
+  {language === 'PL'
+      ? 'Chrzest Polski'
+      : 'Baptism of Poland'}
+      <br />
+    <span className="eTxt-long">
+      {language === 'PL'
+        ? 'Początek chrześcijańskiej kultury w Polsce, tworzenie fundamentów państwowości.'
+        : 'The beginning of Christian culture in Poland, the foundation of statehood.'}
+    </span>
+  </p>
+  
+</div>
   <div class="event">
     <p class="eDate">XV w.</p>
     <p class="eTxt">{language === 'PL' ? 'Pierwsze wzmianki o produkcji mocnych alkoholi – destylacja alkoholu w celach medycznych i kulinarnych. Powstanie pierwszych gorzelni przy klasztorach.' : 'First mentions of strong alcohol production – distillation of alcohol for medical and culinary purposes. The establishment of the first distilleries in monasteries.'}</p>
@@ -288,6 +319,7 @@ w którym dominującą rolę odgrywała szlachta:
     <div class="event2">
     </div> */}
 </div></div>
+
             </section>
           
 

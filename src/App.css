@@ -76,7 +76,7 @@ body, html {
 }
 
 .intro-section h2 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: -20px;
   max-width: 800px;
   margin-left: auto;
@@ -700,7 +700,7 @@ padding-bottom: 20px;
 }
 
 /* Scale the active event */
-.hIn .event.active {
+.event.active {
   transform: scale(1.2);
   transition: transform 0.3s ease; /* Smooth scaling effect */
   z-index: 1; /* Ensure the scaled element stays on top */
@@ -708,9 +708,35 @@ padding-bottom: 20px;
 }
 
 /* Scale down the ::before pseudo-element of the active event */
-.hIn .event.active::before {
+.event.active::before {
   transform: scale(0.8);
   transition: transform 0.1s ease; /* Optional smoother effect for pseudo-element */
+}
+
+.event .event-img {
+  display: none; /* Hidden by default */
+  width: 180px; /* Adjust size */
+  height: auto;
+  margin-top: 10px;
+  align-self: center;
+}
+
+.event.active .event-img {
+  display: block; /* Show image when event is active */
+}
+
+.event .eTxt-long {
+  display: none; /* Long text hidden by default */
+}
+
+.event.active .eTxt-long {
+  display: inline; /* Show long text when event is active */
+  font-size: 0.6rem;
+}
+
+.event .eTxt {
+  display: inline; /* Short text always visible */
+  font-size: 1rem;
 }
 
 /* Scale down the ::after pseudo-element of the active event */
