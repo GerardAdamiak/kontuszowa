@@ -999,16 +999,18 @@ padding-bottom: 20px;
   pointer-events: none;
   
   z-index: 10;
+  margin-top: auto;
 }
 
 .animated-text {
   position: absolute;
  opacity: 0;
- font-size: 0.7rem;
+ font-size: 0.8rem;
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
   z-index: 10;
+  margin-top: auto;
 }
 
 @keyframes growAndFade {
@@ -1037,8 +1039,11 @@ padding-bottom: 20px;
   min-height: 100vh;
   padding: 20px;
   background-color: #f8ebe0; /* Light background for better contrast */
+ 
 }
-
+#obrys{
+  margin-top: auto;
+}
 .section-title {
   font-size: 2.5rem; /* Larger font size for the title */
   margin-bottom: 10px; /* Space between title and body text */
@@ -1053,4 +1058,10 @@ padding-bottom: 20px;
   max-width: 600px; /* Restrict width for better readability */
 }
 
+#intro-text {
+  font-size: 1rem; /* Smaller font size for the body text */
+  color: #555; /* Slightly lighter color for the body text */
+  line-height: 1.6; /* Improve readability */
+  max-width: 600px; /* Restrict width for better readability */
+}
 

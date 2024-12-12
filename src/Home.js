@@ -123,7 +123,7 @@ function Home({ language }) {
       <img src="LogoKontuszowa.png" alt="Higher" className="image" />
       
     </div>
-    <h2>
+    <h2 id="intro-text">
     {language === 'PL'
       ? 'Marka Kontuszowa to hołd dla polskiego dziedzictwa, tradycji i historii. Inspirowana tradycjami Rzeczpospolitej Szlacheckiej wódka premium, oddaje ducha polskiej szlachty, jej gościnność, wolność oraz militarną chwałę. Każda butelka to podróż przez historię, pełną niezwykłych wartości, które przez wieki kształtowały narodową tożsamość Polski.'
       : 'Welcome to Kontuszowa, a brand of exquisite, traditionally distilled Polish vodka. Crafted with care and heritage, every bottle is a celebration of authenticity.'}
@@ -191,6 +191,7 @@ w którym dominującą rolę odgrywała szlachta:
       </div>
       ))}
     </div>
+    <img src="obrys.png" alt="obrys" className="image" id="obrys" />
     </section>
 
 
@@ -198,12 +199,7 @@ w którym dominującą rolę odgrywała szlachta:
             <section className="timeline-section">
                 <h2>{language === 'PL' ? 'Poznaj Historię Polski Szlacheckiej' : 'Discover History of Noble Poland'}</h2>
             <div class="hOut"><div class="hIn">
-  {/* <div class="event2">
-    </div>
-    <div class="event2">
-    </div>
-    <div class="event2">
-    </div> */}
+ 
  <div className="event">
   <p className="eDate">966</p>
   <p className="eTxt">
